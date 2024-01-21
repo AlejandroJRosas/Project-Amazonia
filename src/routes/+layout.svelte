@@ -1,5 +1,8 @@
 <script>
-	import '../app.css';
+	import '../app.css'
+	import { AppShell } from '@skeletonlabs/skeleton'
 </script>
 
-<slot />
+<AppShell>
+	<slot />
+</AppShell>
