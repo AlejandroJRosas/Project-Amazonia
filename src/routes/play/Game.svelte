@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import type { Card } from '$lib/types/card'
+	import type { Card as CardType } from '$lib/types/card'
 	import { playerColors, type PlayersQuantity } from '$lib/types/game-settings'
 	import { shuffle } from '$lib/shuffle-array'
 	import CardModal from './CardModal.svelte'
 	import { fade, fly, scale } from 'svelte/transition'
+	import Card from './Card.svelte'
 
-	export let cards: Card[]
+	export let cards: CardType[]
 	export let playerQuantity: PlayersQuantity
-	let selectedCard: Card | null = null
+	let selectedCard: CardType | null = null
 
 	let comparisonCardIndex: number | null
 	let playerTurn = 0
@@ -141,20 +142,7 @@
 
 	<div class={'mx-auto grid h-[65%] w-[93%] grid-cols-4 rounded-lg border-4 ' + playerColors[0]}>
 		{#each cards as card, index}
-			<button on:click={() => toggleCard(index)} class="aspect-square w-[95%] items-center">
-				{#if card.isActive}
-					<img
-						in:fade
-						class="h-full w-full rounded-lg border-4 border-blue-600 object-cover transition-all"
-						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
-						alt={card.name}
-					/>
-				{:else}
-					<div class="h-full w-full rounded-lg border-4 border-blue-600 bg-slate-600">
-						{card.id}
-					</div>
-				{/if}
-			</button>
+			<Card {card} toggleCard={() => toggleCard(index)} showing={cards[index].isActive} />
 		{/each}
 	</div>
 

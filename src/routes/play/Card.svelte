@@ -1,0 +1,56 @@
+<script lang="ts">
+	import type { Card } from '$lib/types/card'
+
+	export let card: Card
+	export let toggleCard: () => void
+
+	export let showing = false
+</script>
+
+<button
+	on:click={() => {
+		toggleCard()
+	}}
+	class="perspective aspect-square w-full items-center bg-transparent"
+>
+	<div
+		class={'container relative h-full w-full transition-transform duration-300 ' +
+			(showing ? 'flip' : '')}
+	>
+		<div class="perspective rotate absolute h-full w-full">
+			<img
+				class="rotate rotate back-side h-full w-full rounded-lg border-4 border-blue-600 object-cover"
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
+				alt={card.name}
+			/>
+		</div>
+
+		<div
+			class="hidden-back absolute h-full w-full rounded-lg border-4 border-blue-600 bg-slate-600"
+		>
+			{card.id}
+		</div>
+	</div>
+</button>
+
+<style>
+	.hidden-back {
+		backface-visibility: hidden;
+	}
+
+	.flip {
+		transform: rotateY(180deg);
+	}
+
+	.back-side {
+		transform: rotateY(180deg);
+	}
+
+	.container {
+		transform-style: preserve-3d;
+	}
+
+	.perspective {
+		perspective: 1000px;
+	}
+</style>
