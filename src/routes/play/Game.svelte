@@ -9,13 +9,13 @@
 	export let playerQuantity: PlayersQuantity
 
 	let comparisonCardIndex: number | null
-	let playerTurn: number = 0
+	let playerTurn = 0
 	let playerPoints: number[] = []
-	let dialog: HTMLDialogElement
+	let openedModal = false
 
 	function toggleCard(cardIndex: number) {
 		if (cards[cardIndex].isActive) {
-			// dialog.showModal()
+			openModal()
 			return
 		}
 
@@ -49,6 +49,10 @@
 		}
 	}
 
+	function openModal() {
+		openedModal = true
+	}
+
 	onMount(() => {
 		cards = [...cards, ...structuredClone(cards)]
 		cards = shuffle(cards)
@@ -60,7 +64,7 @@
 	})
 </script>
 
-<CardModal bind:dialog />
+<CardModal bind:opened={openedModal} />
 
 <div class="flex flex-col items-center gap-2 pt-6">
 	<div class="flex flex-col gap-3">

@@ -2,8 +2,7 @@
 	import { categoryImages } from '$lib/cards'
 	import type { Card } from '$lib/types/card'
 
-	export let dialog: HTMLDialogElement
-	// export let card: Card
+	export let opened = false
 
 	const test: Card = {
 		id: 1,
@@ -15,16 +14,14 @@
 		category: 'wildlife',
 		isActive: false
 	}
+
+	function close() {
+		opened = false
+	}
 </script>
 
-<dialog bind:this={dialog} class="z-10 flex h-full bg-transparent ring-0">
-	<button
-		on:click={() => {
-			console.log('Button')
-			dialog.close()
-		}}
-		class="h-full w-full border-4 border-yellow-600 opacity-60"
-	>
+<dialog open={opened} class={'z-10 h-full bg-transparent ring-0 ' + (opened ? 'flex' : 'hidden')}>
+	<button on:click={close} class="h-full w-full border-4 border-yellow-600 opacity-60">
 		<figure
 			class="rounded-2 border-gra mx-auto flex h-[450px] w-[300px] flex-col items-center gap-5 self-center rounded-xl border-8 border-[#4C5F6B] bg-[#A47057] shadow-black drop-shadow-2xl"
 		>
