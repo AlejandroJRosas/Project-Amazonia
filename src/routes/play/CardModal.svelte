@@ -22,34 +22,41 @@
 </script>
 
 {#if opened}
-	<dialog open class="z-20 flex h-full w-full bg-black bg-opacity-60 ring-0" transition:fade>
+	<dialog open class="z-20 h-full w-full bg-black bg-opacity-60 ring-0" transition:fade>
 		<button on:click={close} class="h-full w-full">
-			<figure
-				in:scale
-				class="rounded-2 border-gra mx-auto flex h-[450px] w-[300px] flex-col items-center gap-5 self-center rounded-xl border-8 border-[#4C5F6B] bg-[#A47057] shadow-black drop-shadow-2xl"
-			>
-				<header
-					class="mt-[5%] flex h-[10%] w-[90%] flex-row items-center justify-between border border-black"
-				>
-					<h3 class="font-serif font-bold uppercase">{card.name}</h3>
+			<div in:scale class="card variant-filled-primary mx-auto w-[85%] overflow-hidden rounded-lg">
+				<header class="p-0">
 					<img
-						alt="category"
-						src={categoryImages[card.category]}
-						class="ml-4 aspect-square h-[100%] rounded-full"
+						alt="img2"
+						src="https://pm1.aminoapps.com/6224/52710263c25ca0e19f7e7c319157633727b53f07_00.jpg"
+						class="aspect-[9/6] w-full object-cover"
 					/>
 				</header>
-				<img
-					alt="img2"
-					src={card.imgSrc}
-					class="aspect-square w-[85%] border-4 border-gray-600 object-cover"
-				/>
-				<footer class="w-[90%] rounded-lg border-2 border-yellow-600 bg-white bg-opacity-70">
-					<h4 class="text-[13px] font-bold uppercase">[Descripción]</h4>
-					<p class="text-justify text-[10px] leading-relaxed">
-						{card.description}
+				<section class="space-y-4 p-4">
+					<h3 class="text-left font-bold uppercase">{card.name}</h3>
+					<article>
+						<p class="text-justify text-sm leading-relaxed">
+							{card.description}
+						</p>
+					</article>
+				</section>
+				<footer class="flex items-center justify-start space-x-4 border-t border-[#298681] p-4">
+					<figure
+						class="avatar text-surface-400-500-token isolate flex aspect-square w-8 items-center justify-center overflow-hidden rounded-full bg-surface-50 font-semibold"
+					>
+						<img
+							alt="category"
+							src={categoryImages[card.category]}
+							class="avatar-image w-full object-cover"
+						/>
+					</figure>
+					<p class="text-left text-sm font-bold">
+						{card.category === 'wildlife' ? 'Fauna' : ''}
+						{card.category === 'plants' ? 'Flora' : ''}
+						{card.category === 'locations' ? 'Locaciones' : ''}
 					</p>
 				</footer>
-			</figure>
+			</div>
 		</button>
 	</dialog>
 {/if}
