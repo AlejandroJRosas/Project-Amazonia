@@ -14,7 +14,7 @@
 	class="perspective aspect-square w-full items-center bg-transparent"
 >
 	<div
-		class={'container relative h-full w-full transition-transform duration-300 ' +
+		class={'preserve-3d relative h-full w-full transition-transform duration-700 ' +
 			(showing ? 'flip' : '')}
 	>
 		<div class="perspective rotate absolute h-full w-full">
@@ -46,11 +46,11 @@
 		transform: rotateY(180deg);
 	}
 
-	.container {
+	.preserve-3d {
 		transform-style: preserve-3d;
 	}
 
 	.perspective {
-		perspective: 1000px;
+		perspective: 650px;
 	}
 </style>
