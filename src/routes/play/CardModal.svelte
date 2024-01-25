@@ -11,7 +11,6 @@
 		description:
 			'Una carta (カード Kādo) constituye un elemento fundamental para el juego cartas. Representa un Monstruo, una Mágica o una Trampa con los cuales se lleva a cabo un Duelo. Un Deck Principal normal debe incluir entre 40 a 60 cartas, y sólo puede tenerse tres copias de la misma carta.',
 		imgSrc: 'https://pm1.aminoapps.com/6224/52710263c25ca0e19f7e7c319157633727b53f07_00.jpg',
-
 		category: 'wildlife',
 		isActive: false
 	}
@@ -24,7 +23,10 @@
 {#if opened}
 	<dialog open class="z-20 h-full w-full bg-black bg-opacity-60 ring-0" transition:fade>
 		<button on:click={close} class="h-full w-full">
-			<div in:scale class="card variant-filled-primary mx-auto w-[85%] overflow-hidden rounded-lg">
+			<div
+				in:scale
+				class="card variant-filled-primary mx-auto w-[85%] max-w-lg overflow-hidden rounded-lg"
+			>
 				<header class="p-0">
 					<img
 						alt="img2"
