@@ -3,6 +3,6 @@
 	import { AppShell } from '@skeletonlabs/skeleton'
 </script>
 
-<AppShell>
+<AppShell class="mx-auto max-w-lg">
 	<slot />
 </AppShell>
