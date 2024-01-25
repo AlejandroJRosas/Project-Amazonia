@@ -73,7 +73,7 @@
 			return '5'
 		}
 		if (difficulty === 'hard') {
-			return '4'
+			return '6'
 		}
 		return '4'
 	}
