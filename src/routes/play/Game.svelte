@@ -4,17 +4,20 @@
 	import { playerColors, type PlayersQuantity } from '$lib/types/game-settings'
 	import { shuffle } from '$lib/shuffle-array'
 	import CardModal from './CardModal.svelte'
+	import { fade, fly, scale } from 'svelte/transition'
 
 	export let cards: Card[]
 	export let playerQuantity: PlayersQuantity
+	let selectedCard: Card | null = null
 
 	let comparisonCardIndex: number | null
 	let playerTurn = 0
-	let playerPoints: number[] = []
+	let playerPoints: number[] = [0, 0, 0, 0]
 	let openedModal = false
 
 	function toggleCard(cardIndex: number) {
 		if (cards[cardIndex].isActive) {
+			selectedCard = cards[cardIndex]
 			openModal()
 			return
 		}
@@ -54,22 +57,37 @@
 	}
 
 	onMount(() => {
-		cards = [...cards, ...structuredClone(cards)]
+		if (cards.length <= 12) {
+			cards = [...cards, ...structuredClone(cards)]
+		}
 		cards = shuffle(cards)
 		comparisonCardIndex = null
 		playerTurn = 1
-		for (let i = 0; i < playerQuantity; i++) {
-			playerPoints.push(0)
-		}
 	})
 </script>
 
-<CardModal bind:opened={openedModal} />
+{#if selectedCard}
+	<CardModal bind:opened={openedModal} card={selectedCard} />
+{/if}
 
-<div class="flex flex-col items-center gap-2 pt-6">
-	<div class="flex flex-col gap-3">
+<div class="flex h-full w-full flex-col items-center justify-around">
+	<div class="flex h-[15%] flex-col gap-3">
 		<ul class="grid w-full grid-cols-3">
-			<div class="flex flex-row">
+			<div class="relative inline-block">
+				{#key playerPoints[0]}
+					<span
+						transition:scale
+						class="variant-filled-warning badge-icon absolute left-20 z-10 overflow-hidden bg-green-600 font-extrabold text-white"
+					>
+						<span
+							in:fly={{ y: 100 }}
+							out:fly={{ y: -100 }}
+							class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
+						>
+							{playerPoints[0]}
+						</span>
+					</span>
+				{/key}
 				<div class="m-auto aspect-square w-[65%]">
 					<img
 						class={'h-full w-full rounded-full border-4 object-cover transition-all ' +
@@ -80,16 +98,30 @@
 					<p class="text-center">Jugador 1</p>
 					<p class="text-center">Loro</p>
 				</div>
-				<p>{playerPoints[0] ?? '0'}</p>
 			</div>
 
 			<!-- Insertar boton de pausa? -->
-			<div></div>
+			<button class="mx-auto aspect-square h-12 rotate-45 rounded-lg border-4 bg-purple-600">
+				<p class="-rotate-45 font-bold text-white">||</p>
+			</button>
 			<!--  -->
 
-			<div class="flex flex-row">
+			<div class="relative inline-block">
 				{#if playerQuantity >= 2}
-					<p>{playerPoints[1] ?? '0'}</p>
+					{#key playerPoints[1]}
+						<span
+							transition:scale
+							class="variant-filled-warning badge-icon absolute left-6 z-10 overflow-hidden bg-blue-600 font-extrabold text-white"
+						>
+							<span
+								in:fly={{ y: 100 }}
+								out:fly={{ y: -100 }}
+								class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
+							>
+								{playerPoints[1]}
+							</span>
+						</span>
+					{/key}
 				{/if}
 				<div class="m-auto aspect-square w-[65%]">
 					{#if playerQuantity >= 2}
@@ -107,14 +139,12 @@
 		</ul>
 	</div>
 
-	<div
-		class={'mx-auto grid h-auto w-[95%] grid-cols-4 rounded-lg border-4 py-2 ' +
-			playerColors[playerTurn]}
-	>
+	<div class={'mx-auto grid h-[65%] w-[93%] grid-cols-4 rounded-lg border-4 ' + playerColors[0]}>
 		{#each cards as card, index}
-			<button on:click={() => toggleCard(index)} class="m-1 aspect-square w-[95%] items-center">
+			<button on:click={() => toggleCard(index)} class="aspect-square w-[95%] items-center">
 				{#if card.isActive}
 					<img
+						in:fade
 						class="h-full w-full rounded-lg border-4 border-blue-600 object-cover transition-all"
 						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
 						alt={card.name}
@@ -128,9 +158,25 @@
 		{/each}
 	</div>
 
-	<div class="flex flex-col gap-3">
+	<div class="flex h-[15%] flex-col gap-3">
 		<ul class="grid w-full grid-cols-3">
-			<div class="flex flex-row">
+			<div class="relative inline-block">
+				{#if playerQuantity >= 3}
+					{#key playerPoints[2]}
+						<span
+							transition:scale
+							class="variant-filled-warning badge-icon absolute left-20 z-10 overflow-hidden bg-red-600 font-extrabold text-white"
+						>
+							<span
+								in:fly={{ y: 100 }}
+								out:fly={{ y: -100 }}
+								class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
+							>
+								{playerPoints[2]}
+							</span>
+						</span>
+					{/key}
+				{/if}
 				<div class="m-auto aspect-square w-[65%]">
 					{#if playerQuantity >= 3}
 						<img
@@ -143,16 +189,26 @@
 						<p class="text-center">Capibara</p>
 					{/if}
 				</div>
-				{#if playerQuantity >= 3}
-					<p>{playerPoints[2] ?? '0'}</p>
-				{/if}
 			</div>
 
 			<div></div>
 
-			<div class="flex flex-row">
+			<div class="relative inline-block">
 				{#if playerQuantity >= 4}
-					<p>{playerPoints[3] ?? '0'}</p>
+					{#key playerPoints[3]}
+						<span
+							transition:scale
+							class="variant-filled-warning badge-icon absolute left-6 z-10 overflow-hidden bg-yellow-600 font-extrabold text-white"
+						>
+							<span
+								in:fly={{ y: 100 }}
+								out:fly={{ y: -100 }}
+								class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
+							>
+								{playerPoints[3]}
+							</span>
+						</span>
+					{/key}
 				{/if}
 				<div class="m-auto aspect-square w-[65%]">
 					{#if playerQuantity >= 4}
