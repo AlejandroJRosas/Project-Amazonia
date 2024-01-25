@@ -6,3 +6,7 @@ html,
 body {
 	@apply h-full overflow-hidden;
 }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
