@@ -164,7 +164,6 @@
 					<img
 						class={'h-full w-full rounded-full border-4 object-cover transition-all ' +
 							'border' +
-							'border' +
 							(playerQuantity >= 2 ? playerColors[2] : `${playerColors[0]} opacity-50`)}
 						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
 						alt="player2"
