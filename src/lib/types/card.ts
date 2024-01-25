@@ -6,4 +6,5 @@ export interface Card {
 	description: string
 	category: Category
 	imgSrc: string
+  isActive: boolean
 }
