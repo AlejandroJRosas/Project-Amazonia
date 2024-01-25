@@ -42,12 +42,12 @@
 				</section>
 				<footer class="flex items-center justify-start space-x-4 border-t border-[#298681] p-4">
 					<figure
-						class="avatar text-surface-400-500-token isolate flex aspect-square w-8 items-center justify-center overflow-hidden rounded-full bg-surface-50 font-semibold"
+						class="avatar text-surface-400-500-token flex aspect-square w-8 items-center justify-center overflow-hidden rounded-full bg-surface-50 font-semibold"
 					>
 						<img
 							alt="category"
 							src={categoryImages[card.category]}
-							class="avatar-image w-full object-cover"
+							class="h-full w-full object-cover"
 						/>
 					</figure>
 					<p class="text-left text-sm font-bold">

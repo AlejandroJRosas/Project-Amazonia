@@ -11,7 +11,7 @@
 	on:click={() => {
 		toggleCard()
 	}}
-	class="perspective aspect-square w-full items-center bg-transparent"
+	class="perspective m-auto aspect-square w-full items-center bg-transparent px-1"
 >
 	<div
 		class={'preserve-3d relative h-full w-full transition-transform duration-700 ' +
@@ -19,15 +19,13 @@
 	>
 		<div class="perspective rotate absolute h-full w-full">
 			<img
-				class="rotate rotate back-side h-full w-full rounded-lg border-4 border-blue-600 object-cover"
+				class="rotate rotate back-side h-full w-full rounded-lg object-cover"
 				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
 				alt={card.name}
 			/>
 		</div>
 
-		<div
-			class="hidden-back absolute h-full w-full rounded-lg border-4 border-blue-600 bg-slate-600"
-		>
+		<div class="hidden-back absolute h-full w-full rounded-lg bg-slate-600">
 			{card.id}
 		</div>
 	</div>
@@ -51,6 +49,6 @@
 	}
 
 	.perspective {
-		perspective: 200px;
+		perspective: 500px;
 	}
 </style>

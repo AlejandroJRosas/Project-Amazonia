@@ -36,6 +36,6 @@
 		bind:playersQuantity={playerQuantity}
 		{initGame}
 	/>
-{:else if cards && playerQuantity}
-	<Game {cards} {playerQuantity} />
+{:else if cards && playerQuantity && difficulty}
+	<Game {cards} {playerQuantity} {difficulty}/>
 {/if}
