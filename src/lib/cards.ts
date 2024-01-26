@@ -247,7 +247,7 @@ export const PLANTS: Card[] = [
 
 	{
 		id: 30,
-		name: 'Planta de labios calientes (Palicourea elata)',
+		name: 'Heliconias',
 		description: 'Las heliconias, también llamadas pinzas de langosta o flores de loro, son plantas únicas en forma de paleta que se encuentran en la selva amazónica. Sus hojas que desafían la gravedad se conocen como brácteas y pueden ser rojas, amarillas, rosadas, naranjas, moradas o una combinación de estas. Las flores de la heliconia son diminutas y se pueden encontrar dentro de las brácteas. Dato curioso: cuando llueve, la heliconia acumula agua en las brácteas y, al igual que la planta de bromelia, puede servir como hogar para una variedad de pequeños organismos acuáticos. Su néctar también es un delicioso manjar para colibríes y mariposas.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-hot-lip-plant-exploor-peru-blog..png?w=775&ssl=1',
