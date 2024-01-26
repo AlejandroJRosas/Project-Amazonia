@@ -135,15 +135,17 @@
 				comparisonCardIndex = null
 				secondCardIndex = null
 			}, 1200)
+			setTimeout(() => {
+				if (playerTurn === playerQuantity) {
+					playerTurn = 1
+					rounds++
+				} else {
+					playerTurn++
+				}
+			}, 1800)
 		}
 
 		setTimeout(() => {
-			if (playerTurn === playerQuantity) {
-				playerTurn = 1
-				rounds++
-			} else {
-				playerTurn++
-			}
 			isDisabled = false
 		}, 1800)
 	}
