@@ -338,7 +338,13 @@
 			</div>
 		</div>
 
-		<div />
+		<div
+			class={'mx-auto flex h-24 w-[90%] flex-col items-center justify-around rounded-lg border-2 ' +
+				getBorderColor(playerTurn)}
+		>
+			<p class="text-center text-xs">Para más información sobre las cartas</p>
+			<p class="text-sm font-semibold uppercase">¡Tócala!</p>
+		</div>
 
 		<div class="relative inline-block">
 			{#if playerQuantity >= 4}
