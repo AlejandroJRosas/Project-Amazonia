@@ -183,7 +183,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 22,
 		name: 'Nenúfar Gigante (Victoria Amazónica)',
-		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Quizás su característica más espectacular, sin embargo, son sus flores. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas. En nuestros tours amazónicos en Iquitos, por ejemplo, podrás visitar la isla de Yanamono, donde podrás ver la majestuosa Victoria Amazonica.',
+		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Quizás su característica más espectacular, sin embargo, son sus flores. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-water-lilly-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
@@ -349,7 +349,7 @@ export const LOCATIONS: Card[] = [
 		name: 'La cima del Pico da Neblina',
 		description: 'También dentro de la selva amazónica se encuentra el pico más alto de Brasil. Con 2995 metros de altura, el Pico da Neblina, también conocido comoaripo Y, se encuentra en la Serra do Imeri, dentro del municipio de São Miguel da Cachoeira, en el estado de Amazonas, en la frontera con Venezuela. La excursión comienza en São Gabriel da Cachoeira, en un trayecto de 88 kilómetros en coche y otras seis horas en barco por el río Cauaburis hasta un campamento cerca de la aldea de Maturacá. Allí es posible pernoctar y someterse a rituales de orientación y protección realizados por los chamanes yanomami (ancianos de la comunidad y líderes espirituales). Al día siguiente, tras otras dos horas en barco, el grupo de visitantes llega al comienzo del sendero que lleva cuatro días de marcha hasta la cumbre.',
 		category: 'locations',
-		imgSrc: 'https://i0.wp.com/www.erde.com/wp-content/uploads/2020/11/Pico_da_Neblina-2333.jpg?resize=573%2C319&ssl=1',
+		imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Pico_da_Neblina_%28FAB%29.jpg',
     isActive: false
 	},
 	{

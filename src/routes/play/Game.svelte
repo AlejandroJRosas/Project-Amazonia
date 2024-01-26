@@ -12,12 +12,14 @@
 	export let difficulty: Difficulty
 	let selectedCard: CardType | null = null
 
-	let comparisonCardIndex: number | null
+	let comparisonCardIndex: number | null = null
+	let secondCardIndex: number | null = null
 	let playerTurn = 0
 	let playerPoints: number[] = [0, 0, 0, 0]
 	let openedModal = false
 	let cardCounter: number = 0
 	let rounds: number = 1
+	let isDisabled: boolean = false
 
 	function toggleCard(cardIndex: number) {
 		if (cards[cardIndex].isActive) {
@@ -31,6 +33,17 @@
 		compareCard(cardIndex)
 	}
 
+	function isSelected(cardIndex: number) {
+		if (comparisonCardIndex !== null && cards[cardIndex].id === cards[comparisonCardIndex].id) {
+			return true
+		}
+		if (secondCardIndex !== null && cards[cardIndex].id === cards[secondCardIndex].id) {
+			return true
+		}
+
+		return false
+	}
+
 	function compareCard(touchedCardIndex: number) {
 		// Cuando no hay carta de comparación
 		if (comparisonCardIndex === null) {
@@ -38,30 +51,54 @@
 			return
 		}
 		// Cuando hay carta de comparación
+		// border-purple-600
+		// bg-purple-600
+		secondCardIndex = touchedCardIndex
+		isDisabled = true
 		if (cards[comparisonCardIndex].id === cards[touchedCardIndex].id) {
 			cardCounter = cardCounter + 2
-			if (cardCounter === cards.length) {
-				// abrir modal de fin de juego
-				location.reload()
-				return
-			}
 			playerPoints[playerTurn - 1]++
-			comparisonCardIndex = null
-		} else {
-			let aux = comparisonCardIndex
-			comparisonCardIndex = null
+			let aux = playerColors[playerTurn]
 			setTimeout(() => {
-				cards[aux].isActive = false
+				playerColors[playerTurn] = '-purple-600'
+			}, 600)
+			setTimeout(() => {
+				playerColors[playerTurn] = aux
+			}, 600)
+			setTimeout(() => {
+				playerColors[playerTurn] = '-purple-600'
+			}, 600)
+			setTimeout(() => {
+				playerColors[playerTurn] = aux
+			}, 600)
+			setTimeout(() => {
+				if (cardCounter === cards.length) {
+					// abrir modal de fin de juego
+					location.reload()
+					return
+				}
+				comparisonCardIndex = null
+				secondCardIndex = null
+			}, 1200)
+		} else {
+			isDisabled = true
+			setTimeout(() => {
+				cards[comparisonCardIndex as number].isActive = false
 				cards[touchedCardIndex].isActive = false
+				comparisonCardIndex = null
+				secondCardIndex = null
 			}, 1200)
 		}
 
-		if (playerTurn === playerQuantity) {
-			playerTurn = 1
-			rounds++
-		} else {
-			playerTurn++
-		}
+		setTimeout(() => {
+			if (playerTurn === playerQuantity) {
+				playerTurn = 1
+				rounds++
+			} else {
+				playerTurn++
+			}
+			isDisabled = false
+		}, 1800)
 	}
 
 	function openModal() {
@@ -81,12 +118,15 @@
 		return '4'
 	}
 
+	function getBorderColor(player: number): string {
+		return 'border' + playerColors[player]
+	}
+
 	onMount(() => {
 		if (cards.length <= 18) {
 			cards = [...cards, ...structuredClone(cards)]
 		}
 		cards = shuffle(cards)
-		comparisonCardIndex = null
 		playerTurn = 1
 		for (let i = 0; i < cards.length; i++) {
 			cards[i].isActive = true
@@ -95,7 +135,7 @@
 			for (let i = 0; i < cards.length; i++) {
 				cards[i].isActive = false
 			}
-		}, 1500)
+		}, 1200)
 	})
 </script>
 
@@ -144,17 +184,23 @@
 			</button>
 			<div
 				class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 pt-2 leading-none ' +
-					'border' +
-					playerColors[playerTurn]}
+					getBorderColor(playerTurn)}
 			>
 				<h2 class="text-[10px] uppercase">Ronda: {rounds}</h2>
-				<h3 class="text-sm font-bold uppercase italic">Turno</h3>
-				<h4 class={'border text-sm' + playerColors[playerTurn]}>Jugador {playerTurn}</h4>
-				<div
-					class={'my-2 h-2 w-[80%] rounded-full ' +
-						'bg' +
-						(comparisonCardIndex !== null ? playerColors[playerTurn] : '-black')}
-				/>
+				<div class="justify- flex w-full flex-row items-center justify-around">
+					<div
+						class={'aspect-square h-2 rounded-sm ' +
+							'bg' +
+							(comparisonCardIndex !== null ? playerColors[playerTurn] : '-black')}
+					/>
+					<h3 class="text-sm font-bold uppercase italic">Turno</h3>
+					<div
+						class={'aspect-square h-2 rounded-sm ' +
+							'bg' +
+							(secondCardIndex ? playerColors[playerTurn] : '-black')}
+					/>
+				</div>
+				<h4 class="text-sm">Jugador {playerTurn}</h4>
 			</div>
 		</div>
 		<!--  -->
@@ -192,18 +238,25 @@
 		</div>
 	</ul>
 	<!-- grid-cols-4 grid-cols-5 grid-cols-6 -->
-	<div
-		class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 ' +
-			'border' +
-			playerColors[playerTurn] +
-			' grid-cols-' +
-			getGridCols()}
-	>
-		{#each cards as card, index}
-			<Card {card} toggleCard={() => toggleCard(index)} showing={cards[index].isActive} />
-		{/each}
-	</div>
-
+	{#key playerColors}
+		<div
+			class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 ' +
+				getBorderColor(playerTurn) +
+				' grid-cols-' +
+				getGridCols()}
+		>
+			{#each cards as card, index}
+				<!-- isSelected={() => isSelected(index)}
+      currentPlayerColor={getBorderColor(playerTurn)} -->
+				<Card
+					{card}
+					{isDisabled}
+					toggleCard={() => toggleCard(index)}
+					showing={cards[index].isActive}
+				/>
+			{/each}
+		</div>
+	{/key}
 	<ul class="grid h-[15%] w-full grid-cols-3">
 		<div class="relative inline-block">
 			{#if playerQuantity >= 3}
