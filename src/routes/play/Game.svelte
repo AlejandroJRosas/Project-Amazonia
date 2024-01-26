@@ -17,6 +17,7 @@
 	let playerPoints: number[] = [0, 0, 0, 0]
 	let openedModal = false
 	let cardCounter: number = 0
+	let rounds: number = 1
 
 	function toggleCard(cardIndex: number) {
 		if (cards[cardIndex].isActive) {
@@ -57,6 +58,7 @@
 
 		if (playerTurn === playerQuantity) {
 			playerTurn = 1
+			rounds++
 		} else {
 			playerTurn++
 		}
@@ -133,12 +135,13 @@
 				<p class="-rotate-45 font-bold text-white">||</p>
 			</button>
 			<div
-				class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 ' +
+				class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 pt-2 leading-none ' +
 					'border' +
 					playerColors[playerTurn]}
 			>
-				<h3 class="font-bold uppercase italic">Turno</h3>
-				<h4 class={'border' + playerColors[playerTurn]}>Jugador {playerTurn}</h4>
+				<h2 class="text-[10px] uppercase">Ronda: {rounds}</h2>
+				<h3 class="text-sm font-bold uppercase italic">Turno</h3>
+				<h4 class={'border text-sm' + playerColors[playerTurn]}>Jugador {playerTurn}</h4>
 				<div
 					class={'my-2 h-2 w-[80%] rounded-full ' +
 						'bg' +
