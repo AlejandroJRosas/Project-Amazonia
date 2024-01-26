@@ -174,163 +174,163 @@ export const WILDLIFE: Card[] = [
 export const PLANTS: Card[] = [
 	{
 		id: 21,
-		name: 'Plants',
-		description: 'Various plant species',
+		name: 'Ceiba (Ceiba pentandra)',
+		description: 'Alcanzando hasta 70 m de altura, el árbol kapok es uno de los gigantes del Amazonas. También conocido como el árbol de ceiba, esta especie se eleva sobre el resto de la vegetación de la selva e incluso puede crecer hasta 4 m por año. El árbol es el hogar de una serie de especies animales, incluidas aves y ranas. Los murciélagos a menudo se sienten atraídos por los ceibas debido al olor que emiten sus flores rosadas. Nativo de la selva amazónica tropical, el árbol de ceiba también se puede encontrar en América Central, México e incluso en África occidental. Dato curioso: cuando se sumerge en agua, la fruta sin abrir del árbol de ceiba pentandra no se hundirá. Se cree que el fruto del árbol kapok flotó desde América Latina hasta África.',
 		category: 'plants',
-		imgSrc: 'plants.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-kapok-tree-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 22,
-		name: 'Flowers',
-		description: 'Different types of flowers',
+		name: 'Nenúfar Gigante (Victoria Amazónica)',
+		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Quizás su característica más espectacular, sin embargo, son sus flores. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas. La mejor manera de presenciar el nenúfar gigante en Perú es uniéndose a un recorrido por la selva amazónica con un guía experimentado. En nuestros tours amazónicos en Iquitos, por ejemplo, podrás visitar la isla de Yanamono, donde podrás ver la majestuosa Victoria Amazonica. Aún más, los tours incluyen un emocionante recorrido por la selva amazónica, una visita a la isla de monos y una visita a una comunidad local.',
 		category: 'plants',
-		imgSrc: 'flowers.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-water-lilly-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 23,
-		name: 'Trees',
-		description: 'Diverse tree species',
+		name: 'Árbol de caucho (Hevea brasiliensis)',
+		description: 'El árbol de caucho (Hevea brasiliensis) es un árbol de madera de caucho nativo de las selvas tropicales de la cuenca del Amazonas y se encuentra en Perú, Brasil, Ecuador y Colombia. Su característica más famosa es la savia blanca lechosa conocida como látex. El árbol del caucho puede vivir hasta 100 años y crecer hasta alturas de 130 pies. Una vez que una hevea brasiliensis alcanza los seis años, se puede extraer látex. La savia de látex del árbol del caucho se utiliza en el procesamiento moderno del caucho y sigue siendo una fuente de ingresos para varias comunidades indígenas de la Amazonía. Dato curioso: los usos de los árboles de caucho fueron descubiertos y utilizados por primera vez por los antiguos aztecas, olmecas y mayas. La savia de látex se usó para producir una serie de artículos, incluidos ropa y zapatos impermeables.',
 		category: 'plants',
-		imgSrc: 'trees.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-rubber-tree-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 24,
-		name: 'Herbs',
-		description: 'Various herb varieties',
+		name: 'Orquídea (Orchidaceae)',
+		description: 'Originaria de ambientes cálidos y húmedos, la orquídea amazónica es una de las flores más conocidas y delicadas de la selva peruana. A diferencia de las elegantes orquídeas asiáticas, las especies que se encuentran en América Latina cuentan con una paleta de colores más vibrante, que incluye tonos de rojo, púrpura, amarillo e incluso negro. Si bien estas orquídeas son nativas de condiciones húmedas, aún son extremadamente adaptables y pueden crecer bien en casi todos los climas. De hecho, con más de 18.000 especies diferentes, las orquídeas representan alrededor del 8% de todas las plantas con flores.',
 		category: 'plants',
-		imgSrc: 'herbs.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-orchide-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 25,
-		name: 'Fruits',
-		description: 'Different fruit-bearing plants',
+		name: 'Flor de la pasión (Pasiflora)',
+		description: 'La flor de la pasión es una de las flores más elaboradas que encontrarás en la Amazonía peruana. Las flores de la pasión (o pasionarias) son plantas coloridas que se pueden encontrar entrelazadas alrededor de especies de flora más grandes de la selva tropical o molidas en forma de arbustos. Debido a que la mayoría de Pasiflora depende de insectos y pájaros para la polinización, las flores han adoptado colores brillantes que van del blanco al rojo para atraer polinizadores como los insectos. Algunas especies, sin embargo, son polinizadas por murciélagos, por lo que florecen de noche. Sus colores son más sutiles y producen un fuerte olor para atraer a sus polinizadores nocturnos.',
 		category: 'plants',
-		imgSrc: 'fruits.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-passion-flower-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 26,
-		name: 'Vegetables',
-		description: 'Various vegetable plants',
+		name: 'Bromelias (Bromeliaceae)',
+		description: 'Las bromelias son plantas fascinantes con llamativas hojas en forma de espada y colores brillantes (generalmente en tonos naranja, azul, rojo y morado). Hay más de 2.700 especies de bromelias en todo el mundo, siendo la piña la más conocida. En Perú, las bromelias se encuentran en lo profundo de la selva tropical. Crecen en las ramas y troncos de los árboles en la capa de dosel del bosque.',
 		category: 'plants',
-		imgSrc: 'vegetables.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-bromeliads-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 27,
-		name: 'Cacti',
-		description: 'Different cactus species',
+		name: 'Cacao (Theobromacacao)',
+		description: 'Los árboles de cacao son bastante pequeños (4 – 7.5 m high), árboles de hoja perenne que se encuentran en la selva amazónica. Sus semillas, más conocidas como granos de cacao, se utilizan en la fabricación de chocolate. Los árboles de cacao son muy exigentes con el lugar donde viven. Para prosperar, estas especies necesitan calor y lluvia constantes. También necesitan estar a la sombra del sol tropical y al abrigo del viento fuerte. En las condiciones adecuadas, el árbol del cacao produce varios racimos de frutos que emergen directamente del tronco y las ramas del árbol. Las vainas de cacao inmaduras son verdes. A medida que maduran, adquieren un tono anaranjado y pueden crecer hasta 30 cm de largo y 13 cm de ancho.',
 		category: 'plants',
-		imgSrc: 'cacti.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-cacao-exploor-peru-blog.png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 28,
-		name: 'Shrubs',
-		description: 'Different shrub varieties',
+		name: 'Planta de Café (Coffea arabica)',
+		description: 'El cafeto es una planta de hoja perenne que, aunque puede crecer hasta 9 m de altura en la naturaleza, se considera un arbusto o arbusto. Tiene hojas brillantes de color verde oscuro y pequeñas flores blancas que producen un aroma único para ayudar a atraer insectos polinizadores. Una vez que las flores caen de la planta, comienzan a aparecer bayas en su lugar. Las bayas están maduras una vez que alcanzan un color carmesí brillante. Dentro de cada baya hay unos dos pequeños granos de café verde. Las plantas de café pueden vivir hasta 100 años y, por lo general, se necesitan de 5 a 8 años de crecimiento para que una nueva planta de café comience a producir frutos.',
 		category: 'plants',
-		imgSrc: 'shrubs.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-coffee-plant-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 29,
-		name: 'Grasses',
-		description: 'Various grass species',
+		name: 'Mono Brush Vine (Combretum rotundifolium)',
+		description: 'El Monkey Brush es una enredadera llamativa originaria de la región de la selva amazónica. Se considera una planta parásita y se propaga a otras plantas y árboles. Tiene flores puntiagudas que, cuando florecen, se asemejan a un cepillo brillante. Las flores cambian de color de amarillo a naranja intenso, asemejándose a una llama. Son polinizados por abejas y otros insectos, y la fruta sirve como alimento para una serie de aves diferentes.',
 		category: 'plants',
-		imgSrc: 'grasses.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-monkey-brush-vine-exploor-peru-blog...png?w=775&ssl=1',
     isActive: false
 	},
 
 	{
 		id: 30,
-		name: 'Succulents',
-		description: 'Different succulent plants',
+		name: 'Planta de labios calientes (Palicourea elata)',
+		description: 'Las heliconias, también llamadas pinzas de langosta o flores de loro, son plantas únicas en forma de paleta que se encuentran en la selva amazónica. Sus hojas que desafían la gravedad se conocen como brácteas y pueden ser rojas, amarillas, rosadas, naranjas, moradas o una combinación de estas. Las flores de la heliconia son diminutas y se pueden encontrar dentro de las brácteas. Dato curioso: cuando llueve, la heliconia acumula agua en las brácteas y, al igual que la planta de bromelia, puede servir como hogar para una variedad de pequeños organismos acuáticos. Su néctar también es un delicioso manjar para colibríes y mariposas.',
 		category: 'plants',
-		imgSrc: 'succulents.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-hot-lip-plant-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 31,
-		name: 'Bamboos',
-		description: 'Various bamboo species',
+		name: 'Uña de gato (Uncaria tomentosa)',
+		description: 'La palicourea elata es una de las plantas más sorprendentes y de aspecto único que se encuentran en la flora del sotobosque de la Amazonía peruana. Sus brácteas en forma de hoja se asemejan a un conjunto de labios de color rojo rubí, razón por la cual la planta se conoce más comúnmente como la planta de labios calientes. El deslumbrante color rojo de las plantas de labios calientes permanece así por poco tiempo, lo suficiente como para ayudar a atraer pájaros y mariposas para polinizar las flores. Las flores reales en forma de estrella crecen entre las brácteas y suelen ser de color blanco brillante. A medida que las flores maduran, se convierten en bayas de color azul.',
 		category: 'plants',
-		imgSrc: 'bamboos.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-cat-calws-exploor-peru-blog.-.png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 32,
-		name: 'Orchids',
-		description: 'Different orchid species',
+		name: 'Planta de labios calientes (Palicourea elata)',
+		description: 'Originaria de la selva amazónica, la planta de uña de gato es una hierba con espinas distintivas en forma de garra que se proyectan desde la base de sus hojas. Hay más de 34 especies de Uncaria, sin embargo, la Uncaria tomentosa (típicamente encontrada en la Amazonía peruana) es la más común. Se encuentra principalmente en las estribaciones de la selva tropical en elevaciones de 600 – 2440 m. La uña de gato es mejor conocida por sus efectos antiinflamatorios y antioxidantes. De hecho, la Uncaria tomentosa se usa con fines medicinales como tratamiento complementario para enfermedades que atacan el sistema inmunitario, como la artritis reumatoide y la osteoartritis.',
 		category: 'plants',
-		imgSrc: 'orchids.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-hot-lip-plant-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 33,
-		name: 'Ferns',
-		description: 'Various fern varieties',
+		name: 'Higuera estranguladora (género Ficus)',
+		description: 'La higuera estranguladora es uno de los árboles más extraordinarios que encontrarás en la selva tropical del Perú. Los higos estranguladores pasan parte de su ciclo de vida como epífitas (un organismo que crece en la superficie de otra planta). En lugar de comenzar como una semilla en el suelo del suelo del bosque, el ciclo de vida de la higuera estranguladora comienza en el dosel del bosque donde sus semillas se alojan en las grietas de la corteza de su árbol anfitrión. Las raíces de la higuera estranguladora se envuelven alrededor del árbol huésped hasta que rodean por completo el tronco del huésped. Una vez que las raíces llegan al suelo y comienzan a extraer más nutrientes, el crecimiento se acelera.',
 		category: 'plants',
-		imgSrc: 'ferns.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-strangler-fig-exploor-peru-blog...png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 34,
-		name: 'Palms',
-		description: 'Different palm tree species',
+		name: 'Achiote (Bixa orellana)',
+		description: 'El achiote es un arbusto, o pequeño árbol, originario de Sudamérica y la Amazonía. Puede crecer hasta 10 m de altura y su característica más distintiva son sus frutos que se forman en racimos al final de las ramas. Estas vainas de semillas de color marrón rojizo están cubiertas de espigas suaves y contienen pequeñas semillas rojas pigmentadas envueltas en una capa cerosa. Dato curioso: el árbol de achiote tiene muchos usos tradicionales como tinte y, a menudo, se lo conoce como el árbol de lápiz labial. Las tribus amazónicas suelen utilizar el achiote para pintar caras y cuerpos, así como para proteger su piel de los insectos y las quemaduras solares y ayudar a sanar las heridas. La pigmentación vibrante del árbol también lo ha convertido en un ingrediente popular en muchos productos cosméticos y culinarios.',
 		category: 'plants',
-		imgSrc: 'palms.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-achiote-exploor-peru-blog..-.png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 35,
-		name: 'Bonsai',
-		description: 'Various bonsai plants',
+		name: 'Palma de asaí (Euterpe oleracea)',
+		description: 'La palma de acai (también llamada euterpe oleracea) es una especie de palmera cultivada principalmente por sus frutos, hojas y madera del tronco. Originaria de la cuenca del río Amazonas, la palma de acai prospera en altas densidades distribuidas en pantanos y llanuras aluviales. Se puede encontrar en matas de hasta 20 tallos. El fruto de la euterpe oleracea se llama acai. Es una baya similar en apariencia a una uva pero más pequeña. Los frutos inmaduros son de color verde brillante. A medida que maduran, dependiendo de la variedad de palma, se vuelven de color púrpura o verde opaco.',
 		category: 'plants',
-		imgSrc: 'bonsai.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-acai-palm-exploor-peru-blog..-.png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 36,
-		name: 'Aquatic Plants',
-		description: 'Plants that thrive in water environments',
+		name: 'Lechuga de agua (Pistia stratiotes)',
+		description: 'La lechuga de agua es una planta perenne flotante popular que crece en regiones tropicales y subtropicales. Como sugiere su nombre, la planta parece una cabeza de hojas verdes. La planta crece en rosetas con hojas gruesas pero suaves. Cada roseta puede alcanzar un diámetro de unos 30 cm y una altura de 10 cm. Las plantas de lechuga de agua son populares entre los estanques de jardín, ya que pueden inhibir el crecimiento de algas y limpiar el agua. Dato curioso: las plantas de lechuga de agua tienen raíces extremadamente densas que se extienden hasta 102 cm bajo el agua y, a menudo, sirven como refugio para peces pequeños.',
 		category: 'plants',
-		imgSrc: 'aquatic_plants.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-water-lettuce-exploor-peru-blog.-.png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 37,
-		name: 'Mosses',
-		description: 'Different moss species',
+		name: 'Jardines del Diablo (Supay chakra)',
+		description: 'Los jardines del diablo son grandes grupos de árboles que aparecen aleatoriamente en la selva amazónica. Cada uno de estos jardines del diablo consiste casi en su totalidad en una sola especie: Duroia hirsuta (una especie de árbol mirmecófito). Duroia hirsuta es el hábitat preferido de la hormiga Myrmelachista schumanni. Si bien no hay una respuesta concluyente sobre por qué ocurren estos jardines, las propuestas científicas sugieren que estas hormigas envenenan las plantas competidoras inyectándoles un herbicida natural (ácido fórmico) para promover el crecimiento de Duroia hirsuta y, a su vez, proporcionar a la colonia de hormigas una gran cantidad de sitios adecuados para anidar.',
 		category: 'plants',
-		imgSrc: 'mosses.png',
+		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-devils-garden-exploor-peru-blog.-.png?w=775&ssl=1',
     isActive: false
 	},
 	{
 		id: 38,
-		name: 'Fungi',
-		description: 'Various fungi species',
+		name: 'Epífitas del Amazonas',
+		description: 'La luz del sol que penetre hasta el suelo del bosque amazónico es tan baja, que pocas especies de plantas pueden vivir en el sotobosque. Esto ha dado lugar a la evolución de las plantas que pueden vivir encima de los ramos de los árboles: Mucha Flora crece en troncos, ramas, hojas, etc. Lee todo de las flores del Oriente... De hecho cada árbol es un ecosistema en sí mismo, con numerosas especies de flora y fauna que crecen en él, como bromelias, anfíbios, orquídeas, reptiles, cactus, aráceas, helechos, musgos y líquenes. Las epífitas forman micro-ecosistemas completos en los árboles de macrolobia. Esos son árboles de la familia de leguminosa, que crecen en las orillas inundadas de la laguna Cuyabeno, donde crecen en formas muy irregulares, parecidas a "bonsai".',
 		category: 'plants',
-		imgSrc: 'fungi.png',
+		imgSrc: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FPlanta_epifita&psig=AOvVaw1_895HMyzWu9ER12-dovho&ust=1706319280096000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDGq-j0-YMDFQAAAAAdAAAAABAk',
     isActive: false
 	},
 	{
 		id: 39,
-		name: 'Carnivorous Plants',
-		description: 'Plants that capture and digest insects',
+		name: 'Bromelias del Amazonas',
+		description: 'Con más de 2.000 especies, las bromelias son muy prominentemente presentes en Cuyabeno. A veces uno puede encontrarlas  creciendo en el suelo, pero sobre todo como Epífites en las ramas de los árboles. Las hojas de las bromilias envolturan alrededor de los tallos de las plantas, creando pequeños espacios donde se acumula el agua de lluvia. Así a veces, una sola planta puede contener varios litros de agua. En ausencia de peces, estas "piscinas" pequeñas proveen ambientes seguros para especies acuáticas tales como los anfibios: Ranas, junto con sus renacuajos, salamandras, así como sus larvas. Otras criaturas incluyen caracoles, escarabajos, larvas de mosquitos, etc. Cuando esos animales mueren, sus cuerpos se descomponen en minerales que sirven como fertilizantes a las plantas hospedantes. Como Bromelias vienen en varios colores como el morado, naranja, azul y rojo, cada vez más, se les venden como ornamentales. Naturalmente, usted conoce la Bromeliad más conocido, la Piña.',
 		category: 'plants',
-		imgSrc: 'carnivorous_plants.png',
+		imgSrc: 'https://www.google.com/url?sa=i&url=http%3A%2F%2Famazonasinternacional.blogspot.com%2Fp%2Fel-proceso-de-evolucion-de-las-plantas.html&psig=AOvVaw1_895HMyzWu9ER12-dovho&ust=1706319280096000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDGq-j0-YMDFQAAAAAdAAAAABAs',
     isActive: false
 	},
 	{
 		id: 40,
-		name: 'Medicinal Plants',
-		description: 'Plants with medicinal properties',
+		name: 'Hongos del Oriente Ecuatoriano',
+		description: 'Con tanta humedad,se pueden encontrar hongos durante todo el año. Hay hongos que cubren todo el tronco de un árbol y brillan en la oscuridad, como el la primer imagen. Otros son  parásitos que crecen en el cuerpo de insectos, tal como en la imagen derecha. Existen hongos de cualquiera forma en la selva.',
 		category: 'plants',
-		imgSrc: 'medicinal_plants.png',
+		imgSrc: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdelamazonas.com%2Fplantas%2Fhongos-comestible%2F&psig=AOvVaw1mo9IiTdLVZi9mtghcQ2sh&ust=1706319464831000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLD2isH1-YMDFQAAAAAdAAAAABAD',
     isActive: false
 	}
 ]
