@@ -187,7 +187,7 @@
 	<div
 		class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 ' +
 			'border' +
-			playerColors[0] +
+			playerColors[playerTurn] +
 			' grid-cols-' +
 			getGridCols()}
 	>
