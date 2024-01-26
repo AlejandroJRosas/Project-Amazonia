@@ -100,18 +100,22 @@
 			cardCounter = cardCounter + 2
 			playerPoints[playerTurn - 1]++
 			let aux = playerColors[playerTurn]
+      playerColors[playerTurn] = '-purple-600'
+			setTimeout(() => {
+				playerColors[playerTurn] = aux
+			}, 300)
 			setTimeout(() => {
 				playerColors[playerTurn] = '-purple-600'
 			}, 600)
 			setTimeout(() => {
 				playerColors[playerTurn] = aux
-			}, 600)
+			}, 900)
 			setTimeout(() => {
 				playerColors[playerTurn] = '-purple-600'
-			}, 600)
+			}, 1200)
 			setTimeout(() => {
 				playerColors[playerTurn] = aux
-			}, 600)
+			}, 1500)
 			setTimeout(() => {
 				if (cardCounter === cards.length) {
 					// abrir modal de fin de juego
