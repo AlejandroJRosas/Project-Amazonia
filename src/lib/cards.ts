@@ -255,18 +255,18 @@ export const PLANTS: Card[] = [
 	},
 	{
 		id: 31,
-		name: 'Uña de gato (Uncaria tomentosa)',
-		description: 'La palicourea elata es una de las plantas más sorprendentes y de aspecto único que se encuentran en la flora del sotobosque de la Amazonía peruana. Sus brácteas en forma de hoja se asemejan a un conjunto de labios de color rojo rubí, razón por la cual la planta se conoce más comúnmente como la planta de labios calientes. El deslumbrante color rojo de las plantas de labios calientes permanece así por poco tiempo, lo suficiente como para ayudar a atraer pájaros y mariposas para polinizar las flores.',
+		name: 'Cumaseba (Swartzia polyphylla)',
+		description: 'Cumaseba es un árbol tropical que puede crecer hasta 35 m de altura. En Perú, se puede encontrar en elevaciones más bajas en toda el área de la cuenca del Amazonas. Dato curioso: entre las comunidades locales, la corteza y/o la madera de Cumaseba se ha utilizado para dolores musculares y articulares, así como un elixir posparto. La tribu Shipibo-Conibo en Perú también usa la resina del árbol Cumaseba para tratar infecciones oculares y lesiones relacionadas con los ojos.',
 		category: 'plants',
-		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-cat-calws-exploor-peru-blog.-.png?w=775&ssl=1',
+		imgSrc: 'https://www.picturethisai.com/wiki-image/1080/154185589346795545.jpeg',
     isActive: false
 	},
 	{
 		id: 32,
-		name: 'Planta de labios calientes (Palicourea elata)',
+		name: 'Uña de gato (Uncaria tomentosa)',
 		description: 'Originaria de la selva amazónica, la planta de uña de gato es una hierba con espinas distintivas en forma de garra que se proyectan desde la base de sus hojas. Hay más de 34 especies de Uncaria, sin embargo, la Uncaria tomentosa (típicamente encontrada en la Amazonía peruana) es la más común. Se encuentra principalmente en las estribaciones de la selva tropical en elevaciones de 600 – 2440 m. La uña de gato es mejor conocida por sus efectos antiinflamatorios y antioxidantes. De hecho, la Uncaria tomentosa se usa con fines medicinales como tratamiento complementario para enfermedades que atacan el sistema inmunitario, como la artritis reumatoide y la osteoartritis.',
 		category: 'plants',
-		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-hot-lip-plant-exploor-peru-blog..png?w=775&ssl=1',
+		imgSrc: 'https://live.staticflickr.com/8146/7229196828_d9b4cf6cc8_b.jpg',
     isActive: false
 	},
 	{
@@ -349,7 +349,7 @@ export const LOCATIONS: Card[] = [
 		name: 'La cima del Pico da Neblina',
 		description: 'También dentro de la selva amazónica se encuentra el pico más alto de Brasil. Con 2995 metros de altura, el Pico da Neblina, también conocido comoaripo Y, se encuentra en la Serra do Imeri, dentro del municipio de São Miguel da Cachoeira, en el estado de Amazonas, en la frontera con Venezuela. La excursión comienza en São Gabriel da Cachoeira, en un trayecto de 88 kilómetros en coche y otras seis horas en barco por el río Cauaburis hasta un campamento cerca de la aldea de Maturacá. Allí es posible pernoctar y someterse a rituales de orientación y protección realizados por los chamanes yanomami (ancianos de la comunidad y líderes espirituales). Al día siguiente, tras otras dos horas en barco, el grupo de visitantes llega al comienzo del sendero que lleva cuatro días de marcha hasta la cumbre.',
 		category: 'locations',
-		imgSrc: 'https://i0.wp.com/www.labrujulaverde.com/wp-content/uploads/2020/11/Pico_da_Neblina-2333.jpg?resize=573%2C319&ssl=1',
+		imgSrc: 'https://i0.wp.com/www.erde.com/wp-content/uploads/2020/11/Pico_da_Neblina-2333.jpg?resize=573%2C319&ssl=1',
     isActive: false
 	},
 	{
