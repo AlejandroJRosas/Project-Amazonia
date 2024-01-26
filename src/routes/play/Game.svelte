@@ -287,7 +287,7 @@
 	<!-- grid-cols-4 grid-cols-5 grid-cols-6 -->
 	{#key playerColors}
 		<div
-			class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 ' +
+			class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 bg-slate-400 ' +
 				getBorderColor(playerTurn) +
 				' grid-cols-' +
 				getGridCols()}
