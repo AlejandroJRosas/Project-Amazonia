@@ -88,6 +88,14 @@
 		cards = shuffle(cards)
 		comparisonCardIndex = null
 		playerTurn = 1
+		for (let i = 0; i < cards.length; i++) {
+			cards[i].isActive = true
+		}
+		setTimeout(() => {
+			for (let i = 0; i < cards.length; i++) {
+				cards[i].isActive = false
+			}
+		}, 1500)
 	})
 </script>
 
