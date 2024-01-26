@@ -27,7 +27,7 @@
 				in:scale
 				class="card variant-filled-primary mx-auto w-[85%] max-w-lg overflow-hidden rounded-lg"
 			>
-				<header class="p-0">
+				<header class="p-2">
 					<img alt="img2" src={card.imgSrc} class="aspect-[9/6] w-full object-cover" />
 				</header>
 				<section class="space-y-4 p-4">

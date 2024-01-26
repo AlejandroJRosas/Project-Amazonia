@@ -183,7 +183,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 22,
 		name: 'Nenúfar Gigante (Victoria Amazónica)',
-		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Quizás su característica más espectacular, sin embargo, son sus flores. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas. La mejor manera de presenciar el nenúfar gigante en Perú es uniéndose a un recorrido por la selva amazónica con un guía experimentado. En nuestros tours amazónicos en Iquitos, por ejemplo, podrás visitar la isla de Yanamono, donde podrás ver la majestuosa Victoria Amazonica. Aún más, los tours incluyen un emocionante recorrido por la selva amazónica, una visita a la isla de monos y una visita a una comunidad local.',
+		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Quizás su característica más espectacular, sin embargo, son sus flores. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas. En nuestros tours amazónicos en Iquitos, por ejemplo, podrás visitar la isla de Yanamono, donde podrás ver la majestuosa Victoria Amazonica.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-water-lilly-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
@@ -191,7 +191,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 23,
 		name: 'Árbol de caucho (Hevea brasiliensis)',
-		description: 'El árbol de caucho (Hevea brasiliensis) es un árbol de madera de caucho nativo de las selvas tropicales de la cuenca del Amazonas y se encuentra en Perú, Brasil, Ecuador y Colombia. Su característica más famosa es la savia blanca lechosa conocida como látex. El árbol del caucho puede vivir hasta 100 años y crecer hasta alturas de 130 pies. Una vez que una hevea brasiliensis alcanza los seis años, se puede extraer látex. La savia de látex del árbol del caucho se utiliza en el procesamiento moderno del caucho y sigue siendo una fuente de ingresos para varias comunidades indígenas de la Amazonía. Dato curioso: los usos de los árboles de caucho fueron descubiertos y utilizados por primera vez por los antiguos aztecas, olmecas y mayas. La savia de látex se usó para producir una serie de artículos, incluidos ropa y zapatos impermeables.',
+		description: 'El árbol de caucho (Hevea brasiliensis) es un árbol de madera de caucho nativo de las selvas tropicales de la cuenca del Amazonas y se encuentra en Perú, Brasil, Ecuador y Colombia. Su característica más famosa es la savia blanca lechosa conocida como látex. El árbol del caucho puede vivir hasta 100 años y crecer hasta alturas de 130 pies. Una vez que una hevea brasiliensis alcanza los seis años, se puede extraer látex. La savia de látex del árbol del caucho se utiliza en el procesamiento moderno del caucho. Dato curioso: los usos de los árboles de caucho fueron descubiertos y utilizados por primera vez por los antiguos aztecas, olmecas y mayas. La savia de látex se usó para producir una serie de artículos, incluidos ropa y zapatos impermeables.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-rubber-tree-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
@@ -280,7 +280,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 34,
 		name: 'Achiote (Bixa orellana)',
-		description: 'El achiote es un arbusto, o pequeño árbol, originario de Sudamérica y la Amazonía. Puede crecer hasta 10 m de altura y su característica más distintiva son sus frutos que se forman en racimos al final de las ramas. Estas vainas de semillas de color marrón rojizo están cubiertas de espigas suaves y contienen pequeñas semillas rojas pigmentadas envueltas en una capa cerosa. Dato curioso: el árbol de achiote tiene muchos usos tradicionales como tinte y, a menudo, se lo conoce como el árbol de lápiz labial. Las tribus amazónicas suelen utilizar el achiote para pintar caras y cuerpos, así como para proteger su piel de los insectos y las quemaduras solares y ayudar a sanar las heridas. La pigmentación vibrante del árbol también lo ha convertido en un ingrediente popular en muchos productos cosméticos y culinarios.',
+		description: 'El achiote es un arbusto, o pequeño árbol, originario de Sudamérica y la Amazonía. Puede crecer hasta 10 m de altura y su característica más distintiva son sus frutos que se forman en racimos al final de las ramas. Estas vainas de semillas de color marrón rojizo están cubiertas de espigas suaves y contienen pequeñas semillas rojas pigmentadas envueltas en una capa cerosa. Dato curioso: el árbol de achiote tiene muchos usos tradicionales como tinte y, a menudo, se lo conoce como el árbol de lápiz labial. Las tribus amazónicas suelen utilizar el achiote para pintar caras y cuerpos, así como para proteger su piel de los insectos y las quemaduras solares y ayudar a sanar las heridas.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-achiote-exploor-peru-blog..-.png?w=775&ssl=1',
     isActive: false
@@ -314,15 +314,15 @@ export const PLANTS: Card[] = [
 		name: 'Epífitas del Amazonas',
 		description: 'La luz del sol que penetre hasta el suelo del bosque amazónico es tan baja, que pocas especies de plantas pueden vivir en el sotobosque. Esto ha dado lugar a la evolución de las plantas que pueden vivir encima de los ramos de los árboles: Mucha Flora crece en troncos, ramas, hojas, etc. Lee todo de las flores del Oriente... De hecho cada árbol es un ecosistema en sí mismo, con numerosas especies de flora y fauna que crecen en él, como bromelias, anfíbios, orquídeas, reptiles, cactus, aráceas, helechos, musgos y líquenes. Las epífitas forman micro-ecosistemas completos en los árboles de macrolobia. Esos son árboles de la familia de leguminosa, que crecen en las orillas inundadas de la laguna Cuyabeno, donde crecen en formas muy irregulares, parecidas a "bonsai".',
 		category: 'plants',
-		imgSrc: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FPlanta_epifita&psig=AOvVaw1_895HMyzWu9ER12-dovho&ust=1706319280096000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDGq-j0-YMDFQAAAAAdAAAAABAk',
+		imgSrc: 'https://www.cientificos.pe/wp-content/uploads/2020/09/que-son-las-plantas-epifitas.jpg',
     isActive: false
 	},
 	{
 		id: 39,
 		name: 'Bromelias del Amazonas',
-		description: 'Con más de 2.000 especies, las bromelias son muy prominentemente presentes en Cuyabeno. A veces uno puede encontrarlas  creciendo en el suelo, pero sobre todo como Epífites en las ramas de los árboles. Las hojas de las bromilias envolturan alrededor de los tallos de las plantas, creando pequeños espacios donde se acumula el agua de lluvia. Así a veces, una sola planta puede contener varios litros de agua. En ausencia de peces, estas "piscinas" pequeñas proveen ambientes seguros para especies acuáticas tales como los anfibios: Ranas, junto con sus renacuajos, salamandras, así como sus larvas. Otras criaturas incluyen caracoles, escarabajos, larvas de mosquitos, etc. Cuando esos animales mueren, sus cuerpos se descomponen en minerales que sirven como fertilizantes a las plantas hospedantes. Como Bromelias vienen en varios colores como el morado, naranja, azul y rojo, cada vez más, se les venden como ornamentales. Naturalmente, usted conoce la Bromeliad más conocido, la Piña.',
+		description: 'Con más de 2.000 especies, las bromelias son muy prominentemente presentes en Cuyabeno. A veces uno puede encontrarlas  creciendo en el suelo, pero sobre todo como Epífites en las ramas de los árboles. Las hojas de las bromilias envolturan alrededor de los tallos de las plantas, creando pequeños espacios donde se acumula el agua de lluvia. Así a veces, una sola planta puede contener varios litros de agua. En ausencia de peces, estas "piscinas" pequeñas proveen ambientes seguros para especies acuáticas tales como los anfibios: Ranas, junto con sus renacuajos, salamandras, así como sus larvas. Otras criaturas incluyen caracoles, escarabajos, larvas de mosquitos, etc. Cuando esos animales mueren, sus cuerpos se descomponen en minerales que sirven como fertilizantes a las plantas hospedantes.',
 		category: 'plants',
-		imgSrc: 'https://www.google.com/url?sa=i&url=http%3A%2F%2Famazonasinternacional.blogspot.com%2Fp%2Fel-proceso-de-evolucion-de-las-plantas.html&psig=AOvVaw1_895HMyzWu9ER12-dovho&ust=1706319280096000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDGq-j0-YMDFQAAAAAdAAAAABAs',
+		imgSrc: 'https://i.pinimg.com/736x/16/51/7f/16517f390cfb9410dc987b52733726f6.jpg',
     isActive: false
 	},
 	{
@@ -330,7 +330,7 @@ export const PLANTS: Card[] = [
 		name: 'Hongos del Oriente Ecuatoriano',
 		description: 'Con tanta humedad,se pueden encontrar hongos durante todo el año. Hay hongos que cubren todo el tronco de un árbol y brillan en la oscuridad, como el la primer imagen. Otros son  parásitos que crecen en el cuerpo de insectos, tal como en la imagen derecha. Existen hongos de cualquiera forma en la selva.',
 		category: 'plants',
-		imgSrc: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdelamazonas.com%2Fplantas%2Fhongos-comestible%2F&psig=AOvVaw1mo9IiTdLVZi9mtghcQ2sh&ust=1706319464831000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLD2isH1-YMDFQAAAAAdAAAAABAD',
+		imgSrc: 'https://andeantrees.files.wordpress.com/2017/11/amazonas2.jpg',
     isActive: false
 	}
 ]
@@ -338,162 +338,162 @@ export const PLANTS: Card[] = [
 export const LOCATIONS: Card[] = [
 	{
 		id: 41,
-		name: 'Amazon Rainforest',
-		description: 'Lush and diverse rainforest ecosystem',
+		name: 'La pororoca en la desembocadura del Amazonas',
+		description: 'En la desembocadura del Amazonas, donde una extensa pluma de agua fangosa avanza casi 200 kilómetros mar adentro, es posible observar la llamada pororoca. Según el Instituto Brasileño de Geografía y Estadística (IBGE), el fenómeno, uno de los más famosos de la región amazónica, se produce cuando las mareas del Océano Atlántico son lo suficientemente altas como para obligar al río Amazonas a retroceder, lo que genera olas de 3 a 6 metros de altura a lo largo de unos 20 kilómetros hacia el interior del río. Derivada de la lengua tupí, la palabra pororoca significa “estallido” y ocurre todos los días, con un periodo de mayor intensidad entre enero y mayo.',
 		category: 'locations',
-		imgSrc: 'amazon_rainforest.png',
+		imgSrc: 'https://tiwel.es/wp-content/uploads/porocora-ola-rio-amazonas.jpg',
     isActive: false
 	},
 	{
 		id: 42,
-		name: 'Amazon River',
-		description: 'The second-longest river in the world',
+		name: 'La cima del Pico da Neblina',
+		description: 'También dentro de la selva amazónica se encuentra el pico más alto de Brasil. Con 2995 metros de altura, el Pico da Neblina, también conocido comoaripo Y, se encuentra en la Serra do Imeri, dentro del municipio de São Miguel da Cachoeira, en el estado de Amazonas, en la frontera con Venezuela. La excursión comienza en São Gabriel da Cachoeira, en un trayecto de 88 kilómetros en coche y otras seis horas en barco por el río Cauaburis hasta un campamento cerca de la aldea de Maturacá. Allí es posible pernoctar y someterse a rituales de orientación y protección realizados por los chamanes yanomami (ancianos de la comunidad y líderes espirituales). Al día siguiente, tras otras dos horas en barco, el grupo de visitantes llega al comienzo del sendero que lleva cuatro días de marcha hasta la cumbre.',
 		category: 'locations',
-		imgSrc: 'amazon_river.png',
+		imgSrc: 'https://i0.wp.com/www.labrujulaverde.com/wp-content/uploads/2020/11/Pico_da_Neblina-2333.jpg?resize=573%2C319&ssl=1',
     isActive: false
 	},
 	{
 		id: 43,
-		name: 'Iquitos, Peru',
-		description: 'City located in the Amazon rainforest',
+		name: 'Las cascadas de Presidente Figueiredo',
+		description: 'El municipio de Presidente Figueiredo, a 107 kilómetros de Manaus, es conocido como la "Tierra de las Cascadas", según la Compañía de Turismo del Estado de Amazonas (Amazonastur). La principal cascada para los visitantes es la de Iracema, de ocho metros de altura. Según Amazonastur, la mayoría de las cascadas se encuentran en senderos de zonas aisladas y con cierto grado de dificultad de acceso. Por lo tanto, es obligatorio contratar un guía o una empresa acreditada para visitar las hermosas cascadas.',
 		category: 'locations',
-		imgSrc: 'iquitos_peru.png',
+		imgSrc: 'https://thumbs.dreamstime.com/b/hermosa-cascada-en-la-selva-amaz%C3%B3nica-presidente-figueiredo-brasil-agua-roja-el-impresionante-reserva-ecologica-cachoeira-194100697.jpg',
     isActive: false
 	},
 	{
 		id: 44,
-		name: 'Manaus, Brazil',
-		description: 'Metropolitan area in the heart of the Amazon',
+		name: 'Archipiélago de las Anavilhanas, en el río Negro',
+		description: 'En un laberinto de 30 000 hectáreas de islas y espejos de aguas negras que se transforman con la variación del nivel del río, el archipiélago de Anavilhanas destaca entre los destinos amazónicos. Bañado por el río Negro, Anavilhanas está a unos 40 kilómetros de la ciudad de Manaos y es el segundo mayor archipiélago fluvial del mundo, con unas 400 islas y 60 lagos, informa Amazonastur. Debido a su inmensa biodiversidad y riqueza natural, el lugar fue reconocido por la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (Unesco, por sus siglas en inglés) como Patrimonio Natural de la Humanidad en 2000.',
 		category: 'locations',
-		imgSrc: 'manaus_brazil.png',
+		imgSrc: 'https://lopeix.typepad.com/.a/6a00d83452dc5c69e201b8d21c2e3b970c-800wi',
     isActive: false
 	},
 	{
 		id: 45,
-		name: 'Amazon Basin',
-		description: 'Large drainage basin of the Amazon River',
+		name: 'Floresta Nacional de Tapajós',
+		description: 'La extensión de la selva amazónica en el territorio brasileño favorece la aparición de iniciativas de turismo sostenible en zonas cuyos atractivos son especialmente singulares. Este es el caso de quienes visitan la Selva Nacional de Tapajós (también conocida como la Flona de Tapajós) una unidad de conservación de más de 500.000 hectáreas creada en 1970 en el estado brasileño de Pará.',
 		category: 'locations',
-		imgSrc: 'amazon_basin.png',
+		imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Flona_Tapaj%C3%B3s%2C_Par%C3%A1%2C_Brasil_by_Marizilda_Cruppe_-_Rede_Amaz%C3%B4nia_Sustant%C3%A1vel_%286%29_-_50404922503.jpg/800px-Flona_Tapaj%C3%B3s%2C_Par%C3%A1%2C_Brasil_by_Marizilda_Cruppe_-_Rede_Amaz%C3%B4nia_Sustant%C3%A1vel_%286%29_-_50404922503.jpg',
     isActive: false
 	},
 	{
 		id: 46,
-		name: 'YasunÃ­ National Park, Ecuador',
-		description: 'Biodiverse national park in the Amazon',
+		name: 'Yasuni Sacha ñampi',
+		description: 'Cabañas rodeadas de la selva amazónica acogen a viajeros que pasan días en expediciones para ver delfines rosados de río, guacamayos y especies endémicas de monos y ranas arborícolas.',
 		category: 'locations',
-		imgSrc: 'yasuni_national_park.png',
+		imgSrc: 'https://outletviajes.com.ec/wp-content/uploads/2024/01/Sacha-nampi-web-5.jpg',
     isActive: false
 	},
 	{
 		id: 47,
-		name: 'Tambopata National Reserve, Peru',
-		description: 'Protected area in the Peruvian Amazon',
+		name: 'Geoparque Napo Sumaco',
+		description: 'También en la Amazonía ecuatoriana, una zona de 1.800 kilómetros cuadrados en la provincia de Napo. El parque está formado por yacimientos geológicos y arqueológicos, cuevas, espacios culturales y recreativos repartidos entre unidades de conservación, parques nacionales y terrenos privados. La iniciativa, gestionada por nativos quechuas, cuenta con la ayuda de líderes comunitarios, académicos, investigadores y voluntarios para mantener las atracciones turísticas.',
 		category: 'locations',
-		imgSrc: 'tambopata_national_reserve.png',
+		imgSrc: 'https://www.juiciocrudo.com/pics/540x303/3e798257bce9f5b86f1e379ecd8aa930e8561307.jpg',
     isActive: false
 	},
 	{
 		id: 48,
-		name: 'Amazon Indigenous Communities',
-		description: 'Traditional communities living in the Amazon',
+		name: 'Chalalán',
+		description: 'Situado a 100 kilómetros al oeste de la ciudad de Rurrenabaque, en Bolivia, la experiencia turística comienza desde el trayecto inicial hasta las cabañas del albergue. Es un viaje de cinco horas por los ríos Beni y Tuichi. Al llegar a este alojamiento, los turistas tienen la opción de realizar excursiones fluviales o terrestres por la selva amazónica para observar la fauna y la flora locales, así como visitas a las comunidades cercanas.',
 		category: 'locations',
-		imgSrc: 'indigenous_communities.png',
+		imgSrc: 'https://www.boliviaentusmanos.com/turismo/imagenes/chalalan1.jpg',
     isActive: false
 	},
 	{
 		id: 49,
-		name: 'Amazon Rainforest Canopy',
-		description: 'Upper layer of the rainforest with high biodiversity',
+		name: 'Uakari Ecolodge',
+		description: 'En medio de un ecosistema de vegetación semi húmeda que representa el 3% de la selva amazónica, la Posada Uakari pretende ayudar a proteger la biodiversidad local. El proyecto de turismo sostenible sin ánimo de lucro está situado en el estado brasileño de Amazonas, cerca de la ciudad de Tefé, y se encuentra dentro de la Reserva de Desarrollo Sostenible de Mamirauá, entre los ríos Solimões, Japurá y Auati-Paraná. ',
 		category: 'locations',
-		imgSrc: 'rainforest_canopy.png',
+		imgSrc: 'https://www.discoverbrazil.com/wp-content/uploads/2018/10/Uacari-6-.png',
     isActive: false
 	},
 	{
 		id: 50,
-		name: 'Amazon Rainforest Flora',
-		description: 'Diverse plant life in the Amazon',
+		name: 'Río Amazonas',
+		description: 'El río Amazonas (también llamado Paraná-Uassú o Paranaguasú por tribus tupí-guaraní1​) es un río de América del Sur que atraviesa Perú (nacimiento), Colombia y Brasil (desembocadura). Es el río más largo y caudaloso del mundo, y contiene más agua que el Nilo, el Yangtsé y el Misisipi juntos, llevando en si, cerca de una quinta parte del agua dulce en estado líquido del planeta.2​ El Amazonas, que tiene la cuenca hidrográfica más grande en el mundo, alrededor de 7.4 millones de kilómetros cuadrados, representa aproximadamente la quinta parte del caudal fluvial del planeta.',
 		category: 'locations',
-		imgSrc: 'rainforest_flora.png',
+		imgSrc: 'https://img2.rtve.es/im/6464596/?w=900',
     isActive: false
 	},
 	{
 		id: 51,
-		name: 'Amazon Rainforest Fauna',
-		description: 'Rich animal diversity in the Amazon',
+		name: 'Parque Turístico de Quistococha',
+		description: 'El complejo ocupa un espacio de 369 hectáreas de bosque amazónico, y abraza a la Laguna Quistococha. Contiene una playa artificial de arena blanca denominada Tunchi Playa. Además, está rodeado por una vegetación compuesta principalmente por palmeras de aguaje, de «gran homogeneidad y tamaño dominante».1 El lugar también es usado para importantes trabajos de investigación, conservación y reforestación. Alberga un museo, un zoológico y un vivero natural. El museo comprende una colección de taxidermia de la fauna amazónica; el zoológico acoge a varios animales como mamíferos, aves, reptiles, anfibios y peces. Por último, en el vívero se realiza trabajos de reforestación y jardinería botánica.',
 		category: 'locations',
-		imgSrc: 'rainforest_fauna.png',
+		imgSrc: 'https://impetu.pe/wp-content/uploads/2021/05/Complejo-turistico-Quistococha-en-completo-abandono.jpg',
     isActive: false
 	},
 	{
 		id: 52,
-		name: 'Amazon Rainforest Waterfalls',
-		description: 'Scenic waterfalls within the rainforest',
+		name: 'Volcán Pacaya',
+		description: 'El Volcán de Pacaya es un volcán activo ubicado en el municipio de Amatitlán en el departamento de Guatemala y el municipio de San Vicente Pacaya en el departamento de Escuintla, Guatemala. Se desconoce hace cuántos miles de años hizo erupción por primera vez, pero se han registrado al menos 23 erupciones desde la época de colonización española de América en Guatemala. Después de estar dormido durante un siglo, hizo erupción violentamente en 1965 y desde entonces ha estado en constante actividad eruptiva.',
 		category: 'locations',
-		imgSrc: 'rainforest_waterfalls.png',
+		imgSrc: 'https://media.diariolasamericas.com/p/a28afb5ddddc67e966a785d043954f07/adjuntos/216/imagenes/002/248/0002248177/855x0/smart/volvan-pacaya-afpjpg.jpg',
     isActive: false
 	},
 	{
 		id: 53,
-		name: 'Peruvian Amazon Villages',
-		description: 'Villages nestled in the Peruvian Amazon',
+		name: 'Las cataratas de Gocta',
+		description: 'Es una de las más altas del planeta, con saltos de agua de más de 700 metros. Se ubica en la provincia de Bongará. Está compuesta por dos caídas de agua, rodeadas de abundante vegetación y muchas especies de animales, algunas en peligro de extinción.',
 		category: 'locations',
-		imgSrc: 'amazon_villages.png',
+		imgSrc: 'https://blog.redbus.pe/wp-content/uploads/2017/11/cataratas-gocta-768x432.jpg',
     isActive: false
 	},
 	{
 		id: 54,
-		name: 'Amazon Rainforest Aerial View',
-		description: 'Aerial perspective of the vast rainforest landscape',
+		name: 'Catarata de Yumbilla',
+		description: 'Reconocida como una de las cataratas más grandes del mundo, con 895 metros de altura. Está situada en el distrito de Cuipes, provincia de Bongará. Para llegar, se tiene que realizar una pequeña ruta de trekking que vale la pena completar para observar el paisaje.',
 		category: 'locations',
-		imgSrc: 'rainforest_aerial_view.png',
+		imgSrc: 'https://blog.redbus.pe/wp-content/uploads/2017/11/El-misterio-del-nacimiento-de-la-catarata-Yumbilla-en-Peru-768x432.jpg',
     isActive: false
 	},
 	{
 		id: 55,
-		name: 'Amazon Rainforest Tributaries',
-		description: 'River tributaries flowing through the rainforest',
+		name: 'Área de Conservación Privada Bosque de Palmeras – Taulia – Molinopampa',
+		description: 'Este lugar destaca por la fauna que protege. Sin embargo, la mayoría viaja allí para observar a una de las especies más reconocidas: la orquídea, una flor cuya belleza enorgullece a los habitantes de la Amazonía. Además, se puede observar casi 1,500 especies de flores e incluso extraños ejemplares únicos de la región.',
 		category: 'locations',
-		imgSrc: 'rainforest_tributaries.png',
+		imgSrc: 'https://blog.redbus.pe/wp-content/uploads/2017/11/DSC_00771-768x510.jpg',
     isActive: false
 	},
 	{
 		id: 56,
-		name: 'Madre de Dios River, Peru',
-		description: 'River in the Peruvian Amazon basin',
+		name: 'Río Madre de Dios',
+		description: 'Se encuentra en una zona muy húmeda de la Amazonía subandina, la Amazonía peruana, lo que explica su alto caudal. Permite una óptima navegabilidad , se puede viajar sin dificultades desde Puerto Maldonado hasta su confluencia con el río Beni. Entre las muchas actividades, que se desarrollan en sus riberas, destacan las plantaciones de mango y la minería de oro, además de la tala selectiva de finas maderas y la agricultura, que provocan serios problemas ambientales.',
 		category: 'locations',
-		imgSrc: 'madre_de_dios_river.png',
+		imgSrc: 'https://www.peru.travel/Contenido/Destino/Imagen/en/23/1.1/Principal/Tambopata.jpg',
     isActive: false
 	},
 	{
 		id: 57,
-		name: 'Pacaya-Samiria National Reserve, Peru',
-		description: 'Protected natural area in the Amazon basin',
+		name: 'Reserva Nacional Pacaya-Samiria',
+		description: 'La Reserva Nacional Pacaya-Samiria (RNPS) es una zona protegida del Perú ubicada en el departamento de Loreto en la Amazonia. Con una superficie de 2 080 000 ha (20 800 km²) es la Reserva Nacional más extensa del Perú, la segunda área natural protegida del país (luego del parque nacional Alto Purús) y la cuarta área protegida de toda América del Sur. Asimismo, es el área protegida de Amazonía inundable (ecosistema conocido como várzea) más extensa de Sudamérica, debido a ello fue designada sitio RAMSAR el 28 de agosto de 1986.',
 		category: 'locations',
-		imgSrc: 'pacaya_samiria_national_reserve.png',
+		imgSrc: 'https://pacaya-samiria.com/wp-content/uploads/2021/09/pacaya-samiria2.jpg',
     isActive: false
 	},
 	{
 		id: 58,
-		name: 'Amazon Rainforest Sunrise',
-		description: 'Morning sun rising over the rainforest',
+		name: 'Parque nacional Alto Purús',
+		description: 'El parque está situado en las provincias de Purús y Atalaya en el departamento de Ucayali, y la provincia de Tahuamanu en el departamento de Madre de Dios. En la zona se estima una población humana de 3600 habitantes siendo el 75 % indígenas. Los pueblos indígenas son culinas, cashinahuas, sharanahuas, mastanahuas, amahuacas, ashánincas y chaninahuas que por lo general se asientan en los ríos Purús y Curanja. Asimismo, se ha reportado población indígena no contactada de mashcos.',
 		category: 'locations',
-		imgSrc: 'rainforest_sunrise.png',
+		imgSrc: 'https://elcomercio.pe/resizer/CrriHnmho8H9fbNGSv8aSd6vvEg=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZY25X3U5O5FWFDJ23EYEL3BWEM.jpeg',
     isActive: false
 	},
 	{
 		id: 59,
-		name: 'Amazon Rainforest Sunset',
-		description: 'Evening sun setting in the rainforest',
+		name: 'Caverna de Quiocta',
+		description: 'Con una profundidad de 560 metros y ubicada a 2 horas en carro desde la ciudad de Chachapoyas, es el destino ideal para los que quieran aventurarse. Al adentrarse en este lugar, se observan estalactitas y estalagmitas; es decir, ¡formaciones rocosas que poseen miles de años de antigüedad!',
 		category: 'locations',
-		imgSrc: 'rainforest_sunset.png',
+		imgSrc: 'https://blog.redbus.pe/wp-content/uploads/2017/11/TREKING_CAVERNA_QUIOCTA_1_1860-768x389.jpg',
     isActive: false
 	},
 	{
 		id: 60,
-		name: 'Amazon Rainforest Waterways',
-		description: 'Navigable waterways through the rainforest',
+		name: 'Valle de los Cóndores',
+		description: 'Un lugar con flora y fauna privilegiadas, perfecto para la observación de aves. Allí conviven alrededor de 10 especies de colibríes, 4 especies de Tangara, Tucán Andino, Quetzal de cabeza dorada, entre otros, incluyendo el majestuoso cóndor.',
 		category: 'locations',
-		imgSrc: 'rainforest_waterways.png',
+		imgSrc: 'https://blog.redbus.pe/wp-content/uploads/2017/11/laguna-de-condores-banner-min.jpg',
     isActive: false
 	}
 ]
