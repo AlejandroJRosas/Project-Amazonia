@@ -124,7 +124,7 @@ export const WILDLIFE: Card[] = [
 	{
 		id: 15,
 		name: 'Basilisco marrón (Basiliscus vittatus)',
-		description: 'Este quizás es uno de los animales del Amazonas poco conocidos, sobre todo comparado con otros de la lista. No obstante, son muy conocidos por su asombrosa habilidad para correr por la superficie del agua sin hundirse, los basiliscos son otro de los grupos de reptiles que podemos encontrar fácilmente en la región amazónica. Concretamente el basilisco marrón se distribuye por ecosistemas terrestres cercando a orillas de ríos como el Amazonas a su paso por Colombia. No se encuentran en peligro de extinción, por ahora conservan su población en equilibrio, pese a la deforestación del Amazonas y otras problemáticas ambientales que sufre con frecuencia la cuenca amazónica.',
+		description: 'Este quizás es uno de los animales del Amazonas poco conocidos, sobre todo comparado con otros de la lista. No obstante, son muy conocidos por su asombrosa habilidad para correr por la superficie del agua sin hundirse, los basiliscos son otro de los grupos de reptiles que podemos encontrar fácilmente en la región amazónica. Concretamente el basilisco marrón se distribuye por ecosistemas terrestres cercando a orillas de ríos como el Amazonas a su paso por Colombia.',
 		category: 'wildlife',
 		imgSrc: 'https://cdn0.ecologiaverde.com/es/posts/5/8/2/basilisco_marron_basiliscus_vittatus_2285_7_600.webp',
     isActive: false
@@ -256,7 +256,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 31,
 		name: 'Uña de gato (Uncaria tomentosa)',
-		description: 'La palicourea elata es una de las plantas más sorprendentes y de aspecto único que se encuentran en la flora del sotobosque de la Amazonía peruana. Sus brácteas en forma de hoja se asemejan a un conjunto de labios de color rojo rubí, razón por la cual la planta se conoce más comúnmente como la planta de labios calientes. El deslumbrante color rojo de las plantas de labios calientes permanece así por poco tiempo, lo suficiente como para ayudar a atraer pájaros y mariposas para polinizar las flores. Las flores reales en forma de estrella crecen entre las brácteas y suelen ser de color blanco brillante. A medida que las flores maduran, se convierten en bayas de color azul.',
+		description: 'La palicourea elata es una de las plantas más sorprendentes y de aspecto único que se encuentran en la flora del sotobosque de la Amazonía peruana. Sus brácteas en forma de hoja se asemejan a un conjunto de labios de color rojo rubí, razón por la cual la planta se conoce más comúnmente como la planta de labios calientes. El deslumbrante color rojo de las plantas de labios calientes permanece así por poco tiempo, lo suficiente como para ayudar a atraer pájaros y mariposas para polinizar las flores.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-cat-calws-exploor-peru-blog.-.png?w=775&ssl=1',
     isActive: false
@@ -272,7 +272,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 33,
 		name: 'Higuera estranguladora (género Ficus)',
-		description: 'La higuera estranguladora es uno de los árboles más extraordinarios que encontrarás en la selva tropical del Perú. Los higos estranguladores pasan parte de su ciclo de vida como epífitas (un organismo que crece en la superficie de otra planta). En lugar de comenzar como una semilla en el suelo del suelo del bosque, el ciclo de vida de la higuera estranguladora comienza en el dosel del bosque donde sus semillas se alojan en las grietas de la corteza de su árbol anfitrión. Las raíces de la higuera estranguladora se envuelven alrededor del árbol huésped hasta que rodean por completo el tronco del huésped. Una vez que las raíces llegan al suelo y comienzan a extraer más nutrientes, el crecimiento se acelera.',
+		description: 'La higuera estranguladora es uno de los árboles más extraordinarios que encontrarás en la selva tropical del Perú. En lugar de comenzar como una semilla en el suelo del suelo del bosque, el ciclo de vida de la higuera estranguladora comienza en el dosel del bosque donde sus semillas se alojan en las grietas de la corteza de su árbol anfitrión. Las raíces de la higuera estranguladora se envuelven alrededor del árbol huésped hasta que rodean por completo el tronco del huésped. Una vez que las raíces llegan al suelo y comienzan a extraer más nutrientes, el crecimiento se acelera.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-strangler-fig-exploor-peru-blog...png?w=775&ssl=1',
     isActive: false
@@ -312,7 +312,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 38,
 		name: 'Epífitas del Amazonas',
-		description: 'La luz del sol que penetre hasta el suelo del bosque amazónico es tan baja, que pocas especies de plantas pueden vivir en el sotobosque. Esto ha dado lugar a la evolución de las plantas que pueden vivir encima de los ramos de los árboles: Mucha Flora crece en troncos, ramas, hojas, etc. Lee todo de las flores del Oriente... De hecho cada árbol es un ecosistema en sí mismo, con numerosas especies de flora y fauna que crecen en él, como bromelias, anfíbios, orquídeas, reptiles, cactus, aráceas, helechos, musgos y líquenes. Las epífitas forman micro-ecosistemas completos en los árboles de macrolobia. Esos son árboles de la familia de leguminosa, que crecen en las orillas inundadas de la laguna Cuyabeno, donde crecen en formas muy irregulares, parecidas a "bonsai".',
+		description: 'Esto ha dado lugar a la evolución de las plantas que pueden vivir encima de los ramos de los árboles: Mucha Flora crece en troncos, ramas, hojas, etc. Lee todo de las flores del Oriente... De hecho cada árbol es un ecosistema en sí mismo, con numerosas especies de flora y fauna que crecen en él, como bromelias, anfíbios, orquídeas, reptiles, cactus, aráceas, helechos, musgos y líquenes. Las epífitas forman micro-ecosistemas completos en los árboles de macrolobia. Esos son árboles de la familia de leguminosa, que crecen en las orillas inundadas de la laguna Cuyabeno, donde crecen en formas muy irregulares, parecidas a "bonsai".',
 		category: 'plants',
 		imgSrc: 'https://www.cientificos.pe/wp-content/uploads/2020/09/que-son-las-plantas-epifitas.jpg',
     isActive: false
