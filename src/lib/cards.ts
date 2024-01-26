@@ -76,7 +76,7 @@ export const WILDLIFE: Card[] = [
 	{
 		id: 9,
 		name: 'Jaguar (Panthera onca)',
-		description: 'El majestuoso jaguar es el felino de mayor tamaño de América y sin lugar a dudas, uno de los grandes depredadores más emblemáticos de la selva amazónica. Pese a su importancia y admiración por parte de las diferentes culturas indígenas amazónicas pasadas y presentes, los jaguares se incluyen dentro de los animales del Amazonas en peligro de extinción. Aquí puedes conocer más sobre los Animales en peligro de extinción en el Amazonas. La situación actual del jaguar en el Amazonas es bastante inestable, ya que el número de ejemplares disminuye constantemente y la Lista Roja de la UICN o Unión Internacional para la Conservación de la Naturaleza cataloga a este gran felino como "especie casi amenazada" (NT o Near Threatened).',
+		description: 'El majestuoso jaguar es el felino de mayor tamaño de América y sin lugar a dudas, uno de los grandes depredadores más emblemáticos de la selva amazónica. Pese a su importancia y admiración por parte de las diferentes culturas indígenas amazónicas pasadas y presentes, los jaguares se incluyen dentro de los animales del Amazonas en peligro de extinción. Aquí puedes conocer más sobre los Animales en peligro de extinción en el Amazonas. La situación actual del jaguar en el Amazonas es bastante inestable, la Unión Internacional para la Conservación de la Naturaleza cataloga a este gran felino como "especie casi amenazada".',
 		category: 'wildlife',
 		imgSrc: 'https://cdn0.ecologiaverde.com/es/posts/5/8/2/jaguar_panthera_onca_2285_0_600.webp',
     isActive: false
@@ -84,7 +84,7 @@ export const WILDLIFE: Card[] = [
 	{
 		id: 10,
 		name: 'Perezoso (Bradypus tridactylus)',
-		description: 'Los perezosos (Bradypus tridactylus) encuentran su hábitat natural en las ramas altas de los árboles de las cuencas amazónicas, y es considerada una de las especies endémicas del Amazonas más llamativas, caracterizada por su lento metabolismo y su hábito de descansar durante casi todo el día. Actualmente, la población de perezosos es estable en el Amazonas y no sufren riesgo de extinción, pero es cierto que están sufriendo capturas ilegales a diario y en cantidad, como sucede en otras zonas de América en las que habita. Esto nos lleva a pensar que, de seguir así, en poco tiempo podrían pasar a formar parte de esta temible lista.',
+		description: 'Los perezosos encuentran su hábitat natural en las ramas altas de los árboles de las cuencas amazónicas, y es considerada una de las especies endémicas del Amazonas más llamativas, caracterizada por su lento metabolismo y su hábito de descansar durante casi todo el día. Actualmente, la población de perezosos es estable en el Amazonas y no sufren riesgo de extinción, pero es cierto que están sufriendo capturas ilegales a diario y en cantidad, como sucede en otras zonas de América en las que habita.',
 		category: 'wildlife',
 		imgSrc: 'https://cdn0.ecologiaverde.com/es/posts/5/8/2/perezoso_bradypus_tridactylus_2285_1_600.webp',
     isActive: false
@@ -100,7 +100,7 @@ export const WILDLIFE: Card[] = [
 	{
 		id: 12,
 		name: 'Tucanes (Familia Ramphastidae)',
-		description: 'Los coloridos tucanes llenan de vida las copas de los árboles de la selva amazónica. Su inconfundible pico curvado hacia abajo de gran tamaño e intensos colores lo convierten en una de las aves más conocidas y relacionadas con los hábitats que se suceden durante todo el recorrido del río Amazonas. Diferentes especies de tucanes abundan tanto en las selvas de Brasil, como en las del Perú y Colombia. De esta manera, podemos decir que el tucán toco (Ramphastos toco) es una de las especies de animales del amazonas colombiano más conocidas dentro de esta familia de aves, siendo además el tucán de mayor tamaño. Su situación actual en el Amazonas lo sitúa fuera de peligro de extinción.',
+		description: 'Los coloridos tucanes llenan de vida las copas de los árboles de la selva amazónica. Su inconfundible pico curvado hacia abajo de gran tamaño e intensos colores lo convierten en una de las aves más conocidas y relacionadas con los hábitats que se suceden durante todo el recorrido del río Amazonas. Diferentes especies de tucanes abundan tanto en las selvas de Brasil, como en las del Perú y Colombia. El tucán toco (Ramphastos toco) es una de las especies de animales del amazonas colombiano más conocidas dentro de esta familia de aves, siendo además el tucán de mayor tamaño.',
 		category: 'wildlife',
 		imgSrc: 'https://cdn0.ecologiaverde.com/es/posts/5/8/2/tucanes_familia_ramphastidae_2285_3_600.webp',
     isActive: false
@@ -140,7 +140,7 @@ export const WILDLIFE: Card[] = [
 	{
 		id: 17,
 		name: 'Anaconda verde (Eunectes murinus)',
-		description: 'Siguiendo con esta lista de animales del Amazonas nos detenemos a conocer a uno de los más emblemáticos Considerada la reina del Amazonas, tanto las poblaciones locales como los visitantes de cualquier región amazónica del Perú, Brasil o Colombia, no dudarán a la hora de reconocer a la asombrosa anaconda verde. Se trata de la serpiente de mayor peso y volumen del mundo, perteneciente a la familia de boas constrictoras, es decir, aquellas serpientes de gran tamaño con hábitos estranguladores hacia sus presas para asfixiarlas antes de empezar a ingerirlas lentamente. Su estado de conservación en el Amazonas considera, por el momento, a la especie fuera de peligro de extinción.',
+		description: 'Siguiendo con esta lista de animales del Amazonas nos detenemos a conocer a uno de los más emblemáticos Considerada la reina del Amazonas, tanto las poblaciones locales como los visitantes de cualquier región amazónica del Perú, Brasil o Colombia, no dudarán a la hora de reconocer a la asombrosa anaconda verde. Se trata de la serpiente de mayor peso y volumen del mundo, perteneciente a la familia de boas constrictoras, es decir, aquellas serpientes de gran tamaño con hábitos estranguladores hacia sus presas para asfixiarlas antes de empezar a ingerirlas lentamente.',
 		category: 'wildlife',
 		imgSrc: 'https://cdn0.ecologiaverde.com/es/posts/5/8/2/anaconda_verde_eunectes_murinus_2285_6_600.webp',
     isActive: false
@@ -183,7 +183,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 22,
 		name: 'Nenúfar Gigante (Victoria Amazónica)',
-		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Quizás su característica más espectacular, sin embargo, son sus flores. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas.',
+		description: 'Victoria Amazónica (anteriormente conocida como Victoria Regia) es el miembro más grande de la familia de los nenúfares. El nenúfar gigante tiene hojas grandes y redondas con los bordes hacia arriba. El diámetro de cada hoja puede alcanzar un diámetro asombroso de 10 pies. Aunque emergen de noche y solo duran 48 horas, las flores del nenúfar gigante se encuentran entre las más hermosas de la Amazonía. Las flores, al igual que la propia planta, pueden alcanzar tamaños espectaculares, de hasta 16 pulgadas.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-giant-water-lilly-exploor-peru-blog..png?w=775&ssl=1',
     isActive: false
@@ -304,7 +304,7 @@ export const PLANTS: Card[] = [
 	{
 		id: 37,
 		name: 'Jardines del Diablo (Supay chakra)',
-		description: 'Los jardines del diablo son grandes grupos de árboles que aparecen aleatoriamente en la selva amazónica. Cada uno de estos jardines del diablo consiste casi en su totalidad en una sola especie: Duroia hirsuta (una especie de árbol mirmecófito). Duroia hirsuta es el hábitat preferido de la hormiga Myrmelachista schumanni. Si bien no hay una respuesta concluyente sobre por qué ocurren estos jardines, las propuestas científicas sugieren que estas hormigas envenenan las plantas competidoras inyectándoles un herbicida natural (ácido fórmico) para promover el crecimiento de Duroia hirsuta y, a su vez, proporcionar a la colonia de hormigas una gran cantidad de sitios adecuados para anidar.',
+		description: 'Los jardines del diablo son grandes grupos de árboles que aparecen aleatoriamente en la selva amazónica. Cada uno de estos jardines del diablo consiste casi en su totalidad en una sola especie: Duroia hirsuta (una especie de árbol mirmecófito). Duroia hirsuta es el hábitat preferido de la hormiga Myrmelachista schumanni.',
 		category: 'plants',
 		imgSrc: 'https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2022/10/The-18-Most-Fascinating-Plants-in-the-Amazon-Rainforest-devils-garden-exploor-peru-blog.-.png?w=775&ssl=1',
     isActive: false
