@@ -147,26 +147,26 @@ export const WILDLIFE: Card[] = [
 	},
 	{
 		id: 18,
-		name: 'Snakes',
-		description: 'Various snake species',
+		name: 'El tucuxi o bufeo negro (Sotalia fluviatilis)',
+		description: 'El Tucuxi se conoce como el «otro delfín» del Amazonas. El tucuxi es muy similar al delfín mular. Sin embargo, es de menor tamaño, en particular, la variedad fluvial (1,5 m), que es más pequeño que su homólogo marino (hasta 2,1 m).',
 		category: 'wildlife',
-		imgSrc: 'snakes.png',
+		imgSrc: 'https://imgs.mongabay.com/wp-content/uploads/sites/25/2017/05/08161546/delfines-animales-conservacion-biodiversidad-extincion-12-768x509.jpg',
     isActive: false
 	},
 	{
 		id: 19,
-		name: 'Frogs',
-		description: 'Different frog species',
+		name: 'Tamarino de manto dorado (Saguinus tripartitus)',
+		description: 'Una especie sudamericana del género Saguinus. Este pequeño mico puebla las selvas amazónicas de Perú y Ecuador, en donde forman grupos de entre seis y nueve miembros.',
 		category: 'wildlife',
-		imgSrc: 'frogs.png',
+		imgSrc: 'https://imgs.mongabay.com/wp-content/uploads/sites/25/2018/02/17134907/Yasuni_185.jpg',
     isActive: false
 	},
 	{
 		id: 20,
-		name: 'Owls',
-		description: 'Various owl species',
+		name: 'Rana de flecha verde y negra (Dendrobates auratus)',
+		description: 'Dendrobates auratus o rana flecha verde y negra es una especie de anfibio anuro de la familia Dendrobatidae muy común en el suelo de los bosques de Centroamérica (desde el sur de Nicaragua) y la parte noroeste de Colombia. Son animales diurnos. Posee una coloración altamente variable.',
 		category: 'wildlife',
-		imgSrc: 'owls.png',
+		imgSrc: 'https://us.123rf.com/450wm/kjwells86/kjwells861802/kjwells86180200594/95725934-una-rana-dardo-venenoso-verde-y-negro-dendrobates-auratus-se-asienta-sobre-una-hoja-de-pl%C3%A1tano-en.jpg',
     isActive: false
 	}
 ]
