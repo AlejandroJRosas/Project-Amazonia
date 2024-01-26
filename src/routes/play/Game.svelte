@@ -58,7 +58,7 @@
 						startGameReadyToPlay()
 					}
 				},
-				2500 + i * 25
+				2000 + i * 25
 			)
 		}
 	}
