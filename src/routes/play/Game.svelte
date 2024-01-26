@@ -69,8 +69,10 @@
 		cards[cardIndex].isLoaded = true
 		const isAllCardsLoaded = cards.every((card) => card.isLoaded)
 		if (isAllCardsLoaded && !isAlreadyGameLoaded) {
-			isAlreadyGameLoaded = true
-			startGame()
+			setTimeout(() => {
+				isAlreadyGameLoaded = true
+				startGame()
+			}, 1500)
 		}
 	}
 
@@ -100,7 +102,7 @@
 			cardCounter = cardCounter + 2
 			playerPoints[playerTurn - 1]++
 			let aux = playerColors[playerTurn]
-      playerColors[playerTurn] = '-purple-600'
+			playerColors[playerTurn] = '-purple-600'
 			setTimeout(() => {
 				playerColors[playerTurn] = aux
 			}, 300)
