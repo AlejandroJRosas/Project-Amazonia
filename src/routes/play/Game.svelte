@@ -22,6 +22,7 @@
 	let isDisabled: boolean = false
 	let isAlreadyGameLoaded = false
 	let isGamePlayable = false
+	let isGameStarted = false
 
 	function toggleCard(cardIndex: number) {
 		if (!isGamePlayable) return
@@ -44,6 +45,7 @@
 
 	// Postcarga
 	function startGame() {
+		isGameStarted = true
 		for (let i = 0; i < cards.length; i++) {
 			cards[i].isActive = true
 		}
@@ -69,10 +71,7 @@
 		cards[cardIndex].isLoaded = true
 		const isAllCardsLoaded = cards.every((card) => card.isLoaded)
 		if (isAllCardsLoaded && !isAlreadyGameLoaded) {
-			setTimeout(() => {
-				isAlreadyGameLoaded = true
-				startGame()
-			}, 1000)
+			isAlreadyGameLoaded = true
 		}
 	}
 
@@ -214,7 +213,7 @@
 		</div>
 
 		<!-- Insertar boton de pausa? -->
-		<div class="flex flex-col items-center justify-between">
+		<div class="flex flex-col items-center justify-around">
 			<button
 				class={'mx-auto aspect-square h-12 rotate-45 rounded-lg border-4 ' +
 					'bg' +
@@ -222,26 +221,34 @@
 			>
 				<p class="-rotate-45 font-bold text-white">||</p>
 			</button>
-			<div
-				class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 pt-2 leading-none ' +
-					getBorderColor(playerTurn)}
-			>
-				<h2 class="text-[10px] uppercase">Ronda: {rounds}</h2>
-				<div class="justify- flex w-full flex-row items-center justify-around">
-					<div
-						class={'aspect-square h-2 rounded-sm ' +
-							'bg' +
-							(comparisonCardIndex !== null ? playerColors[playerTurn] : '-black')}
-					/>
-					<h3 class="text-sm font-bold uppercase italic">Turno</h3>
-					<div
-						class={'aspect-square h-2 rounded-sm ' +
-							'bg' +
-							(secondCardIndex ? playerColors[playerTurn] : '-black')}
-					/>
+			{#if !isGameStarted}
+				<div class="flex h-auto w-[80%] flex-col items-center rounded-lg border-2 border-green-600">
+					<button on:click={() => startGame()} class="aspect-square h-12 font-extrabold text-black"
+						>Iniciar Juego</button
+					>
 				</div>
-				<h4 class="text-sm">Jugador {playerTurn}</h4>
-			</div>
+			{:else}
+				<div
+					class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 leading-none ' +
+						getBorderColor(playerTurn)}
+				>
+					<h2 class="text-[10px] uppercase">Ronda: {rounds}</h2>
+					<div class="justify- flex w-full flex-row items-center justify-around">
+						<div
+							class={'aspect-square h-2 rounded-sm ' +
+								'bg' +
+								(comparisonCardIndex !== null ? playerColors[playerTurn] : '-black')}
+						/>
+						<h3 class="text-sm font-bold uppercase italic">Turno</h3>
+						<div
+							class={'aspect-square h-2 rounded-sm ' +
+								'bg' +
+								(secondCardIndex ? playerColors[playerTurn] : '-black')}
+						/>
+					</div>
+					<h4 class="text-sm">Jugador {playerTurn}</h4>
+				</div>
+			{/if}
 		</div>
 		<!--  -->
 
@@ -331,7 +338,7 @@
 			</div>
 		</div>
 
-		<div></div>
+		<div />
 
 		<div class="relative inline-block">
 			{#if playerQuantity >= 4}
