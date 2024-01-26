@@ -14,14 +14,18 @@
 
 	let comparisonCardIndex: number | null = null
 	let secondCardIndex: number | null = null
-	let playerTurn = 0
+	let playerTurn = 1
 	let playerPoints: number[] = [0, 0, 0, 0]
 	let openedModal = false
 	let cardCounter: number = 0
 	let rounds: number = 1
 	let isDisabled: boolean = false
+	let isAlreadyGameLoaded = false
+	let isGamePlayable = false
 
 	function toggleCard(cardIndex: number) {
+		if (!isGamePlayable) return
+
 		if (cards[cardIndex].isActive) {
 			selectedCard = cards[cardIndex]
 			openModal()
@@ -33,16 +37,53 @@
 		compareCard(cardIndex)
 	}
 
-	function isSelected(cardIndex: number) {
-		if (comparisonCardIndex !== null && cards[cardIndex].id === cards[comparisonCardIndex].id) {
-			return true
+	function startGameReadyToPlay() {
+		isGamePlayable = true
+		// Separe esto en una funcion aparte para que puedan poner un efecto tipo "EMPIEZA!" o algo asi
+	}
+
+	// Postcarga
+	function startGame() {
+		for (let i = 0; i < cards.length; i++) {
+			cards[i].isActive = true
 		}
-		if (secondCardIndex !== null && cards[cardIndex].id === cards[secondCardIndex].id) {
-			return true
+		for (let i = 0; i < cards.length; i++) {
+			setTimeout(
+				() => {
+					cards[i].isActive = false
+					if (i >= cards.length - 1) {
+						// Esta es la ultima carta :)
+						startGameReadyToPlay()
+					}
+				},
+				1200 + i * 25
+			)
+		}
+	}
+
+	function cardIsLoaded(cardIndex: number) {
+		if (cards[cardIndex].isLoaded) {
+			return
 		}
 
-		return false
+		cards[cardIndex].isLoaded = true
+		const isAllCardsLoaded = cards.every((card) => card.isLoaded)
+		if (isAllCardsLoaded && !isAlreadyGameLoaded) {
+			isAlreadyGameLoaded = true
+			startGame()
+		}
 	}
+
+	// function isSelected(cardIndex: number) {
+	// 	if (comparisonCardIndex !== null && cards[cardIndex].id === cards[comparisonCardIndex].id) {
+	// 		return true
+	// 	}
+	// 	if (secondCardIndex !== null && cards[cardIndex].id === cards[secondCardIndex].id) {
+	// 		return true
+	// 	}
+
+	// 	return false
+	// }
 
 	function compareCard(touchedCardIndex: number) {
 		// Cuando no hay carta de comparación
@@ -121,21 +162,12 @@
 	function getBorderColor(player: number): string {
 		return 'border' + playerColors[player]
 	}
-
+	// Precarga
 	onMount(() => {
 		if (cards.length <= 18) {
 			cards = [...cards, ...structuredClone(cards)]
 		}
 		cards = shuffle(cards)
-		playerTurn = 1
-		for (let i = 0; i < cards.length; i++) {
-			cards[i].isActive = true
-		}
-		setTimeout(() => {
-			for (let i = 0; i < cards.length; i++) {
-				cards[i].isActive = false
-			}
-		}, 1200)
 	})
 </script>
 
@@ -252,6 +284,7 @@
 					{card}
 					{isDisabled}
 					toggleCard={() => toggleCard(index)}
+					cardIsLoaded={() => cardIsLoaded(index)}
 					showing={cards[index].isActive}
 				/>
 			{/each}

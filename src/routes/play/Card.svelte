@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { Card } from '$lib/types/card'
+	import { afterUpdate } from 'svelte'
 
 	export let card: Card
 	export let toggleCard: () => void
+	export let cardIsLoaded: () => void
 	export let isDisabled: boolean
-	// export let currentPlayerColor: string
-	// export let isSelected: () => boolean
 
 	export let showing = false
 </script>
@@ -26,6 +26,7 @@
 				class="rotate rotate back-side h-full w-full rounded-lg object-cover"
 				src={card.imgSrc}
 				alt={card.name}
+				on:load={cardIsLoaded}
 			/>
 		</div>
 		<div class="hidden-back absolute h-full w-full rounded-lg bg-slate-600" />
