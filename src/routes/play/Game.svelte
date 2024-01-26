@@ -47,10 +47,11 @@
 			playerPoints[playerTurn - 1]++
 			comparisonCardIndex = null
 		} else {
+			let aux = comparisonCardIndex
+			comparisonCardIndex = null
 			setTimeout(() => {
-				cards[comparisonCardIndex as number].isActive = false
+				cards[aux].isActive = false
 				cards[touchedCardIndex].isActive = false
-				comparisonCardIndex = null
 			}, 1500)
 		}
 
@@ -138,6 +139,11 @@
 			>
 				<h3 class="font-bold uppercase italic">Turno</h3>
 				<h4 class={'border' + playerColors[playerTurn]}>Jugador {playerTurn}</h4>
+				<div
+					class={'my-2 h-2 w-[80%] rounded-full ' +
+						'bg' +
+						(comparisonCardIndex !== null ? playerColors[playerTurn] : '-black')}
+				/>
 			</div>
 		</div>
 		<!--  -->
