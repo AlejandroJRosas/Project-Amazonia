@@ -53,7 +53,7 @@
 			setTimeout(() => {
 				cards[aux].isActive = false
 				cards[touchedCardIndex].isActive = false
-			}, 1500)
+			}, 1200)
 		}
 
 		if (playerTurn === playerQuantity) {

@@ -28,11 +28,7 @@
 				class="card variant-filled-primary mx-auto w-[85%] max-w-lg overflow-hidden rounded-lg"
 			>
 				<header class="p-0">
-					<img
-						alt="img2"
-						src="https://pm1.aminoapps.com/6224/52710263c25ca0e19f7e7c319157633727b53f07_00.jpg"
-						class="aspect-[9/6] w-full object-cover"
-					/>
+					<img alt="img2" src={card.imgSrc} class="aspect-[9/6] w-full object-cover" />
 				</header>
 				<section class="space-y-4 p-4">
 					<h3 class="text-left font-bold uppercase">{card.name}</h3>

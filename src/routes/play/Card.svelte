@@ -20,14 +20,14 @@
 		<div class="perspective rotate absolute h-full w-full">
 			<img
 				class="rotate rotate back-side h-full w-full rounded-lg object-cover"
-				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
+				src={card.imgSrc}
 				alt={card.name}
 			/>
 		</div>
 
-		<div class="hidden-back absolute h-full w-full rounded-lg bg-slate-600">
-			{card.id}
-		</div>
+		<div class="hidden-back absolute h-full w-full rounded-lg bg-slate-600" />
+		<!-- {card.id}
+		</div> -->
 	</div>
 </button>
 
