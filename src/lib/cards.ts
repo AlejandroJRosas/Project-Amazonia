@@ -461,7 +461,7 @@ export const LOCATIONS: Card[] = [
 		name: 'Río Madre de Dios',
 		description: 'Se encuentra en una zona muy húmeda de la Amazonía subandina, la Amazonía peruana, lo que explica su alto caudal. Permite una óptima navegabilidad , se puede viajar sin dificultades desde Puerto Maldonado hasta su confluencia con el río Beni. Entre las muchas actividades, que se desarrollan en sus riberas, destacan las plantaciones de mango y la minería de oro, además de la tala selectiva de finas maderas y la agricultura, que provocan serios problemas ambientales.',
 		category: 'locations',
-		imgSrc: 'https://www.peru.travel/Contenido/Destino/Imagen/en/23/1.1/Principal/Tambopata.jpg',
+		imgSrc: 'https://www.auratrips.com/wp-content/uploads/tambopata-rio-madrededios-400x280.png',
     isActive: false
 	},
 	{
