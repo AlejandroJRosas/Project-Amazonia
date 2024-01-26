@@ -72,7 +72,7 @@
 			setTimeout(() => {
 				isAlreadyGameLoaded = true
 				startGame()
-			}, 2500)
+			}, 1000)
 		}
 	}
 
