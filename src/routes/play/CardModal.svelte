@@ -5,15 +5,7 @@
 
 	export let opened = false
 
-	export let card: Card = {
-		id: 1,
-		name: 'Chica maga oscura',
-		description:
-			'Una carta (カード Kādo) constituye un elemento fundamental para el juego cartas. Representa un Monstruo, una Mágica o una Trampa con los cuales se lleva a cabo un Duelo. Un Deck Principal normal debe incluir entre 40 a 60 cartas, y sólo puede tenerse tres copias de la misma carta.',
-		imgSrc: 'https://pm1.aminoapps.com/6224/52710263c25ca0e19f7e7c319157633727b53f07_00.jpg',
-		category: 'wildlife',
-		isActive: false
-	}
+	export let card: Card
 
 	function close() {
 		opened = false

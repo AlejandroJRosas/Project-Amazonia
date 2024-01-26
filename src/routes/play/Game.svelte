@@ -58,7 +58,7 @@
 						startGameReadyToPlay()
 					}
 				},
-				1200 + i * 25
+				2500 + i * 25
 			)
 		}
 	}
@@ -141,12 +141,12 @@
 				} else {
 					playerTurn++
 				}
-			}, 1800)
+			}, 1200)
 		}
 
 		setTimeout(() => {
 			isDisabled = false
-		}, 1800)
+		}, 1200)
 	}
 
 	function openModal() {
@@ -223,7 +223,7 @@
 			</button>
 			{#if !isGameStarted}
 				<div class="flex h-auto w-[80%] flex-col items-center rounded-lg border-2 border-green-600">
-					<button on:click={() => startGame()} class="aspect-square h-12 font-extrabold text-black"
+					<button on:click={() => startGame()} class="magic-text aspect-square h-12 font-extrabold"
 						>Iniciar Juego</button
 					>
 				</div>
@@ -343,7 +343,7 @@
 				getBorderColor(playerTurn)}
 		>
 			<p class="text-center text-xs">Para más información sobre las cartas</p>
-			<p class="text-sm font-semibold uppercase">¡Tócala!</p>
+			<p class="magic-text text-sm font-semibold uppercase">¡Tócala!</p>
 		</div>
 
 		<div class="relative inline-block">
@@ -379,3 +379,29 @@
 		</div>
 	</ul>
 </div>
+
+<style>
+	:root {
+		--ucab-blue: #40b4e5;
+		--ucab-green: #047732;
+	}
+
+	@keyframes background-pan {
+		from {
+			background-position: 0% center;
+		}
+
+		to {
+			background-position: -200% center;
+		}
+	}
+
+	.magic-text {
+		animation: background-pan 3s linear infinite;
+		background: linear-gradient(to right, var(--ucab-green), var(--ucab-blue), var(--ucab-green));
+		background-size: 200%;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		white-space: nowrap;
+	}
+</style>
