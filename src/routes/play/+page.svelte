@@ -5,6 +5,7 @@
 	import GameSettings from './GameSettings.svelte'
 	import { getRandomCards } from '$lib/get-random-cards'
 	import Loading from '$lib/components/Loading.svelte'
+	import type { PlayerGameInfo } from './game-components/PlayerCard'
 
 	let selectedCategories: Record<Category, boolean> = {
 		wildlife: false,
@@ -18,6 +19,33 @@
 
 	let cards: Card[] = []
 	let isGameLoading = false
+
+  let players: PlayerGameInfo[] = [
+    {
+      name: 'Guacamayo',
+      icon: '../../../public/avatars/macaw.jpg',
+      color: 'red-500',
+      points: 0,
+    },
+    {
+      name: 'Águila',
+      icon: '../../../public/avatars/eagle.jpg',
+      color: 'blue-400',
+      points: 0,
+    },
+    {
+      name: 'Perezoso',
+      icon: '../../../public/avatars/sloth.png',
+      color: 'purple-400',
+      points: 0,
+    },
+    {
+      name: 'Rana',
+      icon: '../../../public/avatars/frog.jpg',
+      color: 'yellow-500',
+      points: 0,
+    }
+  ]
 
 	async function initGame() {
 		if (!difficulty) return
@@ -63,5 +91,5 @@
 		{initGame}
 	/>
 {:else if cards && playerQuantity && difficulty}
-	<Game {cards} {playerQuantity} {difficulty} />
+	<Game {cards} {players} {playerQuantity} {difficulty} />
 {/if}

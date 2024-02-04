@@ -1,24 +1,28 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import type { Card as CardType } from '$lib/types/card'
-	import { playerColors, type Difficulty, type PlayersQuantity } from '$lib/types/game-settings'
 	import { shuffle } from '$lib/shuffle-array'
 	import CardModal from './CardModal.svelte'
-	import { fly, scale } from 'svelte/transition'
+	import { type Difficulty, type PlayersQuantity } from '$lib/types/game-settings'
+	import type { PlayerGameInfo } from './game-components/PlayerCard'
 	import Card from './Card.svelte'
+	import PlayerCard from './game-components/PlayerCard.svelte'
+	import MagicText from '$lib/components/MagicText.svelte'
 
+	export let players: PlayerGameInfo[]
 	export let cards: CardType[]
 	export let playerQuantity: PlayersQuantity
 	export let difficulty: Difficulty
-	let selectedCard: CardType | null = null
 
+	let amountOfTime = 700
+	let selectedCard: CardType | null = null
 	let comparisonCardIndex: number | null = null
 	let secondCardIndex: number | null = null
-	let playerTurn = 1
-	let playerPoints: number[] = [0, 0, 0, 0]
+	let playerTurn = 0
 	let openedModal = false
 	let cardCounter: number = 0
 	let rounds: number = 1
+
 	let isDisabled: boolean = false
 	let isAlreadyGameLoaded = false
 	let isGamePlayable = false
@@ -86,7 +90,7 @@
 	// 	return false
 	// }
 
-	function compareCard(touchedCardIndex: number) {
+	async function compareCard(touchedCardIndex: number) {
 		// Cuando no hay carta de comparación
 		if (comparisonCardIndex === null) {
 			comparisonCardIndex = touchedCardIndex
@@ -98,55 +102,48 @@
 		secondCardIndex = touchedCardIndex
 		isDisabled = true
 		if (cards[comparisonCardIndex].id === cards[touchedCardIndex].id) {
+			await new Promise((res) => setTimeout(res, amountOfTime))
 			cardCounter = cardCounter + 2
-			playerPoints[playerTurn - 1]++
-			let aux = playerColors[playerTurn]
-			playerColors[playerTurn] = '-purple-600'
-			setTimeout(() => {
-				playerColors[playerTurn] = aux
-			}, 300)
-			setTimeout(() => {
-				playerColors[playerTurn] = '-purple-600'
-			}, 600)
-			setTimeout(() => {
-				playerColors[playerTurn] = aux
-			}, 900)
-			setTimeout(() => {
-				playerColors[playerTurn] = '-purple-600'
-			}, 1200)
-			setTimeout(() => {
-				playerColors[playerTurn] = aux
-			}, 1500)
-			setTimeout(() => {
-				if (cardCounter === cards.length) {
-					// abrir modal de fin de juego
-					location.reload()
-					return
-				}
-				comparisonCardIndex = null
-				secondCardIndex = null
-			}, 1200)
+			players[playerTurn].points++
+			let aux = players[playerTurn].color
+      cards[touchedCardIndex].playerPointColor = cards[comparisonCardIndex].playerPointColor = players[playerTurn].color
+      cards[touchedCardIndex].playerPointRound = cards[comparisonCardIndex].playerPointRound = rounds
+			for (let i = 0; i < 6; i++) {
+				setTimeout(() => {
+					if (players[playerTurn].color === aux) {
+						players[playerTurn].color = 'purple-600'
+					} else {
+						players[playerTurn].color = aux
+					}
+				}, i * 300)
+			}
+
+			// await new Promise((res) => setTimeout(res, amountOfTime))
+			if (cardCounter === cards.length) {
+				// abrir modal de fin de juego
+				location.reload()
+				return
+			}
+			comparisonCardIndex = null
+			secondCardIndex = null
+			await new Promise((res) => setTimeout(res, amountOfTime))
 		} else {
 			isDisabled = true
-			setTimeout(() => {
-				cards[comparisonCardIndex as number].isActive = false
-				cards[touchedCardIndex].isActive = false
-				comparisonCardIndex = null
-				secondCardIndex = null
-			}, 1200)
-			setTimeout(() => {
-				if (playerTurn === playerQuantity) {
-					playerTurn = 1
-					rounds++
-				} else {
-					playerTurn++
-				}
-			}, 1200)
+			await new Promise((res) => setTimeout(res, amountOfTime + 500))
+			cards[comparisonCardIndex as number].isActive = false
+			cards[touchedCardIndex].isActive = false
+			comparisonCardIndex = null
+			secondCardIndex = null
+			await new Promise((res) => setTimeout(res, amountOfTime - 200))
+			if (playerTurn === playerQuantity - 1) {
+				playerTurn = 0
+				rounds++
+			} else {
+				playerTurn++
+			}
 		}
 
-		setTimeout(() => {
-			isDisabled = false
-		}, 1200)
+		isDisabled = false
 	}
 
 	function openModal() {
@@ -166,8 +163,12 @@
 		return '4'
 	}
 
+	function getBackgroundColor(player: number): string {
+		return 'bg-' + players[player].color
+	}
+
 	function getBorderColor(player: number): string {
-		return 'border' + playerColors[player]
+		return 'border-' + players[player].color
 	}
 	// Precarga
 	onMount(() => {
@@ -184,108 +185,63 @@
 
 <div class="flex h-full w-full flex-col items-center justify-stretch gap-5 pt-4">
 	<ul class="grid h-[15%] w-full grid-cols-3">
-		<div class="relative inline-block">
-			{#key playerPoints[0]}
-				<span
-					transition:scale
-					class="variant-filled-warning badge-icon absolute left-20 z-10 overflow-hidden bg-green-600 font-extrabold text-white"
-				>
-					<span
-						in:fly={{ y: 100 }}
-						out:fly={{ y: -100 }}
-						class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
-					>
-						{playerPoints[0]}
-					</span>
-				</span>
-			{/key}
-			<div class="m-auto aspect-square w-[65%]">
-				<img
-					class={'h-full w-full rounded-full border-4 object-cover transition-all ' +
-						'border' +
-						playerColors[1]}
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStsz2YJmA7kktcvpTTHXTIiqOZFvbTh9KHXw&usqp=CAU"
-					alt="player1"
-				/>
-				<p class="text-center">Jugador 1</p>
-				<p class="text-center">Loro</p>
-			</div>
-		</div>
+		<!-- Player 1 -->
+		<PlayerCard player={players[0]} />
 
 		<!-- Insertar boton de pausa? -->
-		<div class="flex flex-col items-center justify-around">
-			<button
-				class={'mx-auto aspect-square h-12 rotate-45 rounded-lg border-4 ' +
-					'bg' +
-					playerColors[playerTurn]}
-			>
-				<p class="-rotate-45 font-bold text-white">||</p>
-			</button>
-			{#if !isGameStarted}
-				<div class="flex h-auto w-[80%] flex-col items-center rounded-lg border-2 border-green-600">
-					<button on:click={() => startGame()} class="magic-text aspect-square h-12 font-extrabold"
-						>Iniciar Juego</button
-					>
-				</div>
-			{:else}
-				<div
-					class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 leading-none ' +
-						getBorderColor(playerTurn)}
+		{#key players[playerTurn].color}
+			<div class="flex flex-col items-center justify-around">
+				<button
+					class={'mx-auto aspect-square h-12 rotate-45 rounded-lg border-4 ' +
+						getBackgroundColor(playerTurn)}
 				>
-					<h2 class="text-[10px] uppercase">Ronda: {rounds}</h2>
-					<div class="justify- flex w-full flex-row items-center justify-around">
-						<div
-							class={'aspect-square h-2 rounded-sm ' +
-								'bg' +
-								(comparisonCardIndex !== null ? playerColors[playerTurn] : '-black')}
-						/>
-						<h3 class="text-sm font-bold uppercase italic">Turno</h3>
-						<div
-							class={'aspect-square h-2 rounded-sm ' +
-								'bg' +
-								(secondCardIndex ? playerColors[playerTurn] : '-black')}
-						/>
-					</div>
-					<h4 class="text-sm">Jugador {playerTurn}</h4>
-				</div>
-			{/if}
-		</div>
-		<!--  -->
-
-		<div class="relative inline-block">
-			{#if playerQuantity >= 2}
-				{#key playerPoints[1]}
-					<span
-						transition:scale
-						class="variant-filled-warning badge-icon absolute left-6 z-10 overflow-hidden bg-blue-600 font-extrabold text-white"
+					<p class="-rotate-45 font-bold text-white">||</p>
+				</button>
+				{#if !isGameStarted}
+					<div
+						class="flex h-auto w-[80%] flex-col items-center rounded-lg border-2 border-red-500"
 					>
-						<span
-							in:fly={{ y: 100 }}
-							out:fly={{ y: -100 }}
-							class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
-						>
-							{playerPoints[1]}
-						</span>
-					</span>
-				{/key}
-			{/if}
-			<div class="m-auto aspect-square w-[65%]">
-				{#if playerQuantity >= 2}
-					<img
-						class={'h-full w-full rounded-full border-4 object-cover transition-all ' +
-							'border' +
-							(playerQuantity >= 2 ? playerColors[2] : `${playerColors[0]} opacity-50`)}
-						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3TKbS5u4ng_4e8gdxlD4FeX6TCYDd8syEylLal0tjmtw3obBu90NOpGnd6Q1alTojmM&usqp=CAU"
-						alt="player2"
-					/>
-					<p class="text-center">Jugador 2</p>
-					<p class="text-center">Jaguar</p>
+						<button on:click={() => startGame()} class="aspect-square h-12 font-extrabold">
+							<MagicText>
+								<span class="">Iniciar Juego</span>
+							</MagicText>
+						</button>
+					</div>
+				{:else}
+					<div
+						class={'flex h-auto w-[80%] flex-col items-center rounded-lg border-2 leading-none ' +
+							getBorderColor(playerTurn)}
+					>
+						<h2 class="text-[10px] uppercase">Ronda: {rounds}</h2>
+						<div class="justify- flex w-full flex-row items-center justify-around">
+							<div
+								class={'aspect-square h-2 rounded-sm ' +
+									(comparisonCardIndex !== null ? getBackgroundColor(playerTurn) : 'bg-black')}
+							/>
+							<h3 class="text-sm font-bold uppercase italic">Turno</h3>
+							<div
+								class={'aspect-square h-2 rounded-sm ' +
+									(secondCardIndex ? getBackgroundColor(playerTurn) : 'bg-black')}
+							/>
+						</div>
+						<h4 class="text-sm">{players[playerTurn].name}</h4>
+					</div>
 				{/if}
 			</div>
-		</div>
+		{/key}
+		<!--  -->
+
+		<!-- Player 2 -->
+		{#if playerQuantity >= 2}
+			<PlayerCard player={players[1]} />
+		{:else}
+			<div />
+		{/if}
 	</ul>
+
 	<!-- grid-cols-4 grid-cols-5 grid-cols-6 -->
-	{#key playerColors}
+	<!-- // ---------------------------------------- -->
+	{#key players[playerTurn].color}
 		<div
 			class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 bg-slate-400 ' +
 				getBorderColor(playerTurn) +
@@ -296,6 +252,7 @@
 				<!-- isSelected={() => isSelected(index)}
     currentPlayerColor={getBorderColor(playerTurn)} -->
 				<Card
+					borderColor={() => getBorderColor(playerTurn)}
 					{card}
 					{isDisabled}
 					toggleCard={() => toggleCard(index)}
@@ -305,105 +262,32 @@
 			{/each}
 		</div>
 	{/key}
-	<ul class="grid h-[15%] w-full grid-cols-3">
-		<div class="relative inline-block">
-			{#if playerQuantity >= 3}
-				{#key playerPoints[2]}
-					<span
-						transition:scale
-						class="variant-filled-warning badge-icon absolute left-20 z-10 overflow-hidden bg-red-600 font-extrabold text-white"
-					>
-						<span
-							in:fly={{ y: 100 }}
-							out:fly={{ y: -100 }}
-							class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
-						>
-							{playerPoints[2]}
-						</span>
-					</span>
-				{/key}
-			{/if}
-			<div class="m-auto aspect-square w-[65%]">
-				{#if playerQuantity >= 3}
-					<img
-						class={'h-full w-full rounded-full border-4 object-cover transition-all ' +
-							'border' +
-							(playerQuantity >= 3 ? playerColors[3] : `${playerColors[0]} opacity-50`)}
-						src="https://images.ecestaticos.com/7xeAFMsSXGyJyC85ib0Ke-0oBIw=/0x0:2000x1296/1200x1200/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd9d%2Feec%2Fe8e%2Fd9deece8e45d39228451118a5af1fcf7.jpg"
-						alt="player3"
-					/>
-					<p class="text-center">Jugador 3</p>
-					<p class="text-center">Capibara</p>
-				{/if}
-			</div>
-		</div>
 
-		{#key playerColors}
+	<ul class="grid h-[15%] w-full grid-cols-3">
+		<!-- Player 3 -->
+		{#if playerQuantity >= 3}
+			<PlayerCard player={players[2]} />
+		{:else}
+			<div />
+		{/if}
+
+		{#key players[playerTurn].color}
 			<div
 				class={'mx-auto flex h-24 w-[90%] flex-col items-center justify-around rounded-lg border-2 ' +
 					getBorderColor(playerTurn)}
 			>
 				<p class="text-center text-xs">Para más información sobre las cartas</p>
-				<p class="magic-text text-sm font-semibold uppercase">¡Tócala!</p>
+				<MagicText>
+					<p class="text-sm font-semibold uppercase">¡Tócala!</p>
+				</MagicText>
 			</div>
 		{/key}
 
-		<div class="relative inline-block">
-			{#if playerQuantity >= 4}
-				{#key playerPoints[3]}
-					<span
-						transition:scale
-						class="variant-filled-warning badge-icon absolute left-6 z-10 overflow-hidden bg-yellow-600 font-extrabold text-white"
-					>
-						<span
-							in:fly={{ y: 100 }}
-							out:fly={{ y: -100 }}
-							class="absolute left-[50%] top-[45%] flex -translate-x-[50%] -translate-y-[50%] items-center text-center"
-						>
-							{playerPoints[3]}
-						</span>
-					</span>
-				{/key}
-			{/if}
-			<div class="m-auto aspect-square w-[65%]">
-				{#if playerQuantity >= 4}
-					<img
-						class={'h-full w-full rounded-full border-4 object-cover transition-all ' +
-							'border' +
-							(playerQuantity >= 4 ? playerColors[4] : `${playerColors[0]} opacity-50`)}
-						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9jjGhmrjY-rEke71YfCvllYj_K0e_ZHibZg&usqp=CAU"
-						alt="player4"
-					/>
-					<p class="text-center">Jugador 4</p>
-					<p class="text-center">Rana</p>
-				{/if}
-			</div>
-		</div>
+		<!-- Player 4 -->
+		{#if playerQuantity >= 4}
+			<PlayerCard player={players[3]} />
+		{:else}
+			<div />
+		{/if}
 	</ul>
 </div>
-
-<style>
-	:root {
-		--ucab-blue: #40b4e5;
-		--ucab-green: #047732;
-	}
-
-	@keyframes background-pan {
-		from {
-			background-position: 0% center;
-		}
-
-		to {
-			background-position: -200% center;
-		}
-	}
-
-	.magic-text {
-		animation: background-pan 3s linear infinite;
-		background: linear-gradient(to right, var(--ucab-green), var(--ucab-blue), var(--ucab-green));
-		background-size: 200%;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		white-space: nowrap;
-	}
-</style>
