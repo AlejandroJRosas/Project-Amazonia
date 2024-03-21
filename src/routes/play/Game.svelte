@@ -28,7 +28,7 @@
 	let isGamePlayable = false
 	let isGameStarted = false
 
-	function toggleCard(cardIndex: number) {
+	async function toggleCard(cardIndex: number) {
 		if (!isGamePlayable) return
 
 		if (cards[cardIndex].isActive) {
@@ -38,6 +38,7 @@
 		}
 
 		cards[cardIndex].isActive = true
+    await new Promise((res) => setTimeout(res, amountOfTime))
 
 		compareCard(cardIndex)
 	}
@@ -79,16 +80,16 @@
 		}
 	}
 
-	// function isSelected(cardIndex: number) {
-	// 	if (comparisonCardIndex !== null && cards[cardIndex].id === cards[comparisonCardIndex].id) {
-	// 		return true
-	// 	}
-	// 	if (secondCardIndex !== null && cards[cardIndex].id === cards[secondCardIndex].id) {
-	// 		return true
-	// 	}
+	function isSelected(cardIndex: number): boolean {
+		if (comparisonCardIndex !== null && cards[cardIndex].id === cards[comparisonCardIndex].id) {
+			return true
+		}
+		if (secondCardIndex !== null && cards[cardIndex].id === cards[secondCardIndex].id) {
+			return true
+		}
 
-	// 	return false
-	// }
+		return false
+	}
 
 	async function compareCard(touchedCardIndex: number) {
 		// Cuando no hay carta de comparación
@@ -242,6 +243,8 @@
 	<!-- grid-cols-4 grid-cols-5 grid-cols-6 -->
 	<!-- // ---------------------------------------- -->
 	{#key players[playerTurn].color}
+  {#key comparisonCardIndex}
+  {#key secondCardIndex}
 		<div
 			class={'mx-auto mt-2 grid h-[60%] w-[93%] rounded-lg border-4 bg-slate-400 ' +
 				getBorderColor(playerTurn) +
@@ -249,10 +252,10 @@
 				getGridCols()}
 		>
 			{#each cards as card, index}
-				<!-- isSelected={() => isSelected(index)}
-    currentPlayerColor={getBorderColor(playerTurn)} -->
+      <!-- isSelected={() => isSelected(index)}  -->
 				<Card
 					borderColor={() => getBorderColor(playerTurn)}
+          isSelected={() => isSelected(index)}
 					{card}
 					{isDisabled}
 					toggleCard={() => toggleCard(index)}
@@ -261,6 +264,8 @@
 				/>
 			{/each}
 		</div>
+  {/key}
+  {/key}
 	{/key}
 
 	<ul class="grid h-[15%] w-full grid-cols-3">

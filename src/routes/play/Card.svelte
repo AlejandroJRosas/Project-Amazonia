@@ -6,9 +6,15 @@
 	export let toggleCard: () => void
 	export let cardIsLoaded: () => void
 	export let isDisabled: boolean
-	export let borderColor: () => string
-
 	export let showing = false
+
+  export let borderColor: () => string
+  export let isSelected: () => boolean
+
+  // border-red-500
+  // border-blue-400
+  // border-yellow-500
+  // border-purple-400
 </script>
 
 <button
@@ -25,7 +31,7 @@
 		<div class="perspective rotate absolute h-full w-full">
 			<span
 				transition:scale
-				class={'back-side variant-filled-warning badge-icon absolute left-1 top-1 z-10 overflow-hidden ' +
+				class={'back-side variant-filled-warning badge-icon absolute left-1 top-1 z-10 h-3 w-3 overflow-hidden ' +
 					'bg-' +
 					(card.playerPointColor ? card.playerPointColor : 'transparent')}
 			>
@@ -37,15 +43,17 @@
 				<!-- 	{(card.playerPointRound ? card.playerPointRound : '')} -->
 				<!-- </span> -->
 			</span>
+      <!-- border-red-500 -->
 			<img
-				class={'rotate rotate back-side h-full w-full rounded-lg object-cover ' + borderColor}
+				class={'rotate rotate back-side h-full w-full rounded-lg object-cover ' + 
+        (isSelected() ? 'border-2 ' + borderColor() : '')}
 				src={card.imgSrc}
 				alt={card.name}
 				on:load={cardIsLoaded}
 			/>
 		</div>
 		<div class="hidden-back absolute h-full w-full rounded-lg bg-slate-600">
-			<!-- {card.id} -->
+			{card.id}
 			<img
 				class="h-3/5 translate-x-2/3 translate-y-1/3 object-cover"
 				src={'../../../public/question-mark.png'}
