@@ -53,10 +53,10 @@
 			/>
 		</div>
 		<div class="hidden-back absolute h-full w-full rounded-lg bg-slate-600">
-			{card.id}
+			<!-- {card.id} -->
 			<img
 				class="h-3/5 translate-x-2/3 translate-y-1/3 object-cover"
-				src={'../../../public/question-mark.png'}
+				src={'../../../assets/question-mark.avif'}
 				alt="question-mark"
 			/>
 		</div>

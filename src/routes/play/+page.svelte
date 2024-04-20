@@ -20,28 +20,29 @@
 	let cards: Card[] = []
 	let isGameLoading = false
 
+  const AVATARS_URL = '../../../assets/avatars'
   let players: PlayerGameInfo[] = [
     {
       name: 'Guacamayo',
-      icon: '../../../public/avatars/macaw.jpg',
+      icon: `${AVATARS_URL}/macaw.avif`,
       color: 'red-500',
       points: 0,
     },
     {
       name: 'Águila',
-      icon: '../../../public/avatars/eagle.jpg',
+      icon: `${AVATARS_URL}/eagle.avif`,
       color: 'blue-400',
       points: 0,
     },
     {
       name: 'Perezoso',
-      icon: '../../../public/avatars/sloth.png',
+      icon: `${AVATARS_URL}/sloth.avif`,
       color: 'purple-400',
       points: 0,
     },
     {
       name: 'Rana',
-      icon: '../../../public/avatars/frog.jpg',
+      icon: `${AVATARS_URL}/frog.avif`,
       color: 'yellow-500',
       points: 0,
     }

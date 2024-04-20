@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     fs: {
       allow: [
-        './public/'
+        './assets/'
       ]
     }
   }

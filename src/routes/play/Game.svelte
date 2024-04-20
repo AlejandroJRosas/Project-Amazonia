@@ -45,7 +45,6 @@
 
 	function startGameReadyToPlay() {
 		isGamePlayable = true
-		// Separe esto en una funcion aparte para que puedan poner un efecto tipo "EMPIEZA!" o algo asi
 	}
 
 	// Postcarga
