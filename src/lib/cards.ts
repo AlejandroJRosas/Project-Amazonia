@@ -23,7 +23,7 @@ export const WILDLIFE: Card[] = [
     name: 'Mono araña',
     description: 'El mono araña es una especie de primate que también es encontrado en el Amazonas e igualmente se alimenta de frutas, insectos y pequeños reptiles, pero su tamaño es más grande, pues puede medir de 65 a 90 centímetros de longitud sin cola. Este animal no posee dedo pulgar y su color varía de castaño claro a negro, dependiendo la especie.',
     category: 'wildlife',
-    imgSrc: `${WILDLIFE_URL}/mono-araña.avif`,
+    imgSrc: `${WILDLIFE_URL}/mono-arana.avif`,
     isActive: false
   },
   {

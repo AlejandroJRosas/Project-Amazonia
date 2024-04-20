@@ -124,16 +124,13 @@
 				location.reload()
 				return
 			}
-			comparisonCardIndex = null
-			secondCardIndex = null
-			await new Promise((res) => setTimeout(res, amountOfTime))
+			comparisonCardIndex = secondCardIndex = null
+			// await new Promise((res) => setTimeout(res, amountOfTime))
 		} else {
 			isDisabled = true
 			await new Promise((res) => setTimeout(res, amountOfTime + 500))
-			cards[comparisonCardIndex as number].isActive = false
-			cards[touchedCardIndex].isActive = false
-			comparisonCardIndex = null
-			secondCardIndex = null
+			cards[comparisonCardIndex as number].isActive = cards[touchedCardIndex].isActive = false
+			comparisonCardIndex = secondCardIndex = null
 			await new Promise((res) => setTimeout(res, amountOfTime - 200))
 			if (playerTurn === playerQuantity - 1) {
 				playerTurn = 0
