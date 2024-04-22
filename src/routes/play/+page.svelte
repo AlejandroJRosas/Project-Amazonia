@@ -20,33 +20,33 @@
 	let cards: Card[] = []
 	let isGameLoading = false
 
-  const AVATARS_URL = 'assets/avatars'
-  let players: PlayerGameInfo[] = [
-    {
-      name: 'Guacamayo',
-      icon: `${AVATARS_URL}/macaw.avif`,
-      color: 'red-500',
-      points: 0,
-    },
-    {
-      name: 'Águila',
-      icon: `${AVATARS_URL}/eagle.avif`,
-      color: 'blue-400',
-      points: 0,
-    },
-    {
-      name: 'Perezoso',
-      icon: `${AVATARS_URL}/sloth.avif`,
-      color: 'purple-400',
-      points: 0,
-    },
-    {
-      name: 'Rana',
-      icon: `${AVATARS_URL}/frog.avif`,
-      color: 'yellow-500',
-      points: 0,
-    }
-  ]
+	const AVATARS_URL = 'assets/avatars'
+	let players: PlayerGameInfo[] = [
+		{
+			name: 'Guacamayo',
+			icon: `${AVATARS_URL}/macaw.avif`,
+			color: 'red-500',
+			points: 0
+		},
+		{
+			name: 'Águila',
+			icon: `${AVATARS_URL}/eagle.avif`,
+			color: 'blue-400',
+			points: 0
+		},
+		{
+			name: 'Perezoso',
+			icon: `${AVATARS_URL}/sloth.avif`,
+			color: 'purple-400',
+			points: 0
+		},
+		{
+			name: 'Rana',
+			icon: `${AVATARS_URL}/frog.avif`,
+			color: 'yellow-500',
+			points: 0
+		}
+	]
 
 	async function initGame() {
 		if (!difficulty) return
