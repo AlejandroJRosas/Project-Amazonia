@@ -13,7 +13,7 @@
 	<a href="/play" type="button" class="variant-filled-primary btn">Jugar ahora</a>
 
 	<img
-		src="https://www.ngenespanol.com/wp-content/uploads/2023/01/guacamaya-roja-el-ave-que-oestenta-sus-colores-en-america-latina.jpg"
+		src="../../assets/home.avif"
 		alt=""
 	/>
 </div>

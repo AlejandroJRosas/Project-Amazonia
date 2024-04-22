@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton'
 	import type { Category, Difficulty, PlayersQuantity } from '$lib/types/game-settings'
+	import { categoryImages } from '$lib/cards'
 
 	export let selectedCategories: Record<Category, boolean>
 	export let difficulty: Difficulty | null
@@ -23,7 +24,7 @@
 	)
 </script>
 
-<div class="flex flex-col gap-6 pt-6">
+<div class=" flex-col flex gap-6 pt-6">
 	<h1 class="h1 m-auto font-bold">Modo de juego</h1>
 
 	<figure class="flex flex-col gap-3">
@@ -33,7 +34,7 @@
 				<img
 					class={'h-full w-full rounded-lg object-cover transition-all ' +
 						(selectedCategories.wildlife ? 'scale-100 opacity-100' : 'scale-75 opacity-75')}
-					src="https://cdn0.ecologiaverde.com/es/posts/5/8/2/capibara_hydrochaeris_hydrochaeris_2285_2_600.jpg"
+					src={categoryImages.wildlife}
 					alt="Fauna"
 				/>
 				<p class="h5 text-center">Fauna</p>
@@ -42,7 +43,7 @@
 				<img
 					class={'h-full w-full rounded-lg object-cover transition-all ' +
 						(selectedCategories.plants ? 'scale-100 opacity-100' : 'scale-75 opacity-75')}
-					src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flora_Amazonia.jpg"
+					src={categoryImages.plants}
 					alt="Flora"
 				/>
 				<p class="h5 text-center">Flora</p>
@@ -51,7 +52,7 @@
 				<img
 					class={'h-full w-full rounded-lg object-cover transition-all ' +
 						(selectedCategories.locations ? 'scale-100 opacity-100' : 'scale-75 opacity-75')}
-					src="https://filminperu.peru.info/archivos/locacionGaleria/fip-locaciones-crucero_rio_amazonas-carrusel-001.jpg"
+					src={categoryImages.locations}
 					alt="Locaciones"
 				/>
 				<p class="h5 text-center">Locaciones</p>

@@ -17,7 +17,11 @@
 		<button on:click={close} class="h-full w-full">
 			<div
 				in:scale
-				class="card variant-filled-primary mx-auto w-[85%] max-w-lg overflow-hidden rounded-lg"
+				class={"card mx-auto w-[85%] max-w-lg overflow-hidden rounded-lg " + 
+          (card.category === 'wildlife' ? 'variant-filled-primary' : '') +
+          (card.category === 'plants' ? 'variant-filled-success' : '') +
+          (card.category === 'locations' ? 'variant-filled-warning' : '')
+        }
 			>
 				<header class="p-2">
 					<img alt="img2" src={card.imgSrc} class="aspect-[9/6] w-full object-cover" />
