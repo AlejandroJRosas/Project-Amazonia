@@ -48,7 +48,7 @@
 			<!-- {card.id} -->
 			<img
 				class="h-3/5 translate-x-2/3 translate-y-1/3 object-cover"
-				src={'../../../assets/question-mark.avif'}
+				src={'assets/question-mark.avif'}
 				alt="question-mark"
 			/>
 		</div>

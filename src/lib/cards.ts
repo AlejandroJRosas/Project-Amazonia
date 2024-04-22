@@ -1,6 +1,6 @@
 import type { Card } from './types/card'
 
-const BASE_URL = '../../assets'
+const BASE_URL = 'assets'
 
 export const categoryImages = {
   wildlife: `${BASE_URL}/categories/wildlife.avif`,

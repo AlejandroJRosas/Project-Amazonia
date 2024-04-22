@@ -20,7 +20,7 @@
 	let cards: Card[] = []
 	let isGameLoading = false
 
-  const AVATARS_URL = '../../../assets/avatars'
+  const AVATARS_URL = 'assets/avatars'
   let players: PlayerGameInfo[] = [
     {
       name: 'Guacamayo',

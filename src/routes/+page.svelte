@@ -13,7 +13,7 @@
 	<a href="/play" type="button" class="variant-filled-primary btn">Jugar ahora</a>
 
 	<img
-		src="../../assets/home.avif"
-		alt=""
+		src="assets/home.avif"
+		alt="home-img"
 	/>
 </div>
