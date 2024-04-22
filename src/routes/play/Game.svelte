@@ -8,6 +8,7 @@
 	import Card from './Card.svelte'
 	import PlayerCard from './game-components/PlayerCard.svelte'
 	import MagicText from '$lib/components/MagicText.svelte'
+	import EndGameModal from './EndGameModal.svelte'
 
 	export let players: PlayerGameInfo[]
 	export let cards: CardType[]
@@ -20,6 +21,7 @@
 	let secondCardIndex: number | null = null
 	let playerTurn = 0
 	let openedModal = false
+  let openedEndGameModal = false
 	let cardCounter: number = 0
 	let rounds: number = 1
 
@@ -121,6 +123,7 @@
 			// await new Promise((res) => setTimeout(res, amountOfTime))
 			if (cardCounter === cards.length) {
 				// abrir modal de fin de juego
+        // openedEndGameModal = true
 				location.reload()
 				return
 			}
@@ -175,6 +178,10 @@
 		cards = shuffle(cards)
 	})
 </script>
+
+{#if openedEndGameModal}
+  <EndGameModal opened={openedEndGameModal} rounds={rounds} players={players} playerQuantity={playerQuantity}/>
+{/if}
 
 {#if selectedCard}
 	<CardModal bind:opened={openedModal} card={selectedCard} />
